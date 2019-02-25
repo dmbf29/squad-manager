@@ -31,8 +31,15 @@
     <% end %>
   </div>
   <div class="squad-body">
-    <% @squad.squad_places.each do %>
-
+    <% @squad.squad_places.each do |squad_place| %>
+      <h5><%= squad_place.name %></h5>
+      <ul>
+      <% squad_place.players.each do |player| %>
+        <div class="squad-player-card">
+          <lix  ><%= player.full_name %></lix >
+        </div>
+      <% end %>
+      </ul>
     <% end %>
   </div>
 </div>
