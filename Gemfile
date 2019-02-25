@@ -8,6 +8,7 @@ gem 'puma'
 gem 'rails', '5.2.2'
 gem 'redis'
 
+gem 'acts-as-taggable-on', '~> 6.0'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'devise'
