@@ -13,6 +13,6 @@ class Squad < ApplicationRecord
     positions << "Bench"
     positions << "Other"
 
-    SquadPlace.autocreate(positions)
+    SquadPlace.autocreate(positions, self)
   end
 end

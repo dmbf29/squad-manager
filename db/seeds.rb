@@ -13,3 +13,8 @@ formations.each_with_index do |formation, index|
     fws: number.split("-")[2].to_i
   ).first_or_create!
 end
+
+User.create!(
+  email: 'douglasmberkley@gmail.com',
+  password: ENV['ADMIN_PASSWORD']
+)
