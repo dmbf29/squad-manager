@@ -2,6 +2,7 @@ class Squad < ApplicationRecord
   belongs_to :user
   belongs_to :formation
   has_many :squad_places
+  has_many :players, through: :squad_places
   after_create :build_squad_places
 
   def build_squad_places

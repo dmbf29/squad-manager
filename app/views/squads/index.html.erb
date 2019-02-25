@@ -1,0 +1,9 @@
+<div class="squad-header">
+  <h1>Squads</h1>
+  <%= link_to new_squad_path do %>
+    <i class="fas fa-plus"></i>
+  <% end %>
+</div>
+<% @squads.each do |squad| %>
+  <p><%= link_to squad.name squad_path(squad)%></p>
+<% end %>

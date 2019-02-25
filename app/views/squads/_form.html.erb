@@ -1,0 +1,5 @@
+<%= simple_form_for @squad do |f| %>
+  <%= f.input :name %>
+  <%= f.association :formation %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
