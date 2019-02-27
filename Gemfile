@@ -17,6 +17,7 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'twilio-ruby', '~> 5.20.1'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
