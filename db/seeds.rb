@@ -70,6 +70,32 @@ Player.where(
   squad_place_id: squad.squad_places.find_by(number: 1)
 ).first_or_create!
 
+Player.where(
+  first_name: "Paul",
+  last_name: "Dummet",
+  nation: "WAL",
+  age: 27,
+  potential_high: 76s,
+  potential_low: 75,
+  rating: 71,
+  badge: "heart",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 2)
+).first_or_create!
 
+Player.where(
+  first_name: "Freddie",
+  last_name: "Woodman",
+  nation: "ENG",
+  age: 18,
+  potential_high: 80,
+  potential_low: 75,
+  rating: 71,
+  badge: "futbol",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 2)
+).first_or_create!
 
 
