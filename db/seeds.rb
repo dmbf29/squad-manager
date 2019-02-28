@@ -153,3 +153,31 @@ Player.where(
   photo: "",
   squad_place_id: squad.squad_places.find_by(number: 4)
 ).first_or_create!
+
+Player.where(
+  first_name: "Jamie",
+  last_name: "Sterry",
+  nation: "ENG",
+  age: 23,
+  potential_high: 69,
+  potential_low: 63,
+  rating: 63,
+  badge: "lemon",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 5)
+).first_or_create!
+
+Player.where(
+  first_name: "Lewis",
+  last_name: "Cass",
+  nation: "ENG",
+  age: 20,
+  potential_high: 74,
+  potential_low: 68,
+  rating: 60,
+  badge: "lemon",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 5)
+).first_or_create!
