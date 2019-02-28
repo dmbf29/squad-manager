@@ -127,14 +127,14 @@ Player.where(
 ).first_or_create!
 
 Player.where(
-  first_name: "First",
-  last_name: "Roth",
-  nation: "GER",
-  age: 18,
-  potential_high: 88,
-  potential_low: 80,
-  rating: 59,
-  badge: "sheild-alt",
+  first_name: "Stefan",
+  last_name: "O'Conner",
+  nation: "ENG",
+  age: 22,
+  potential_high: 66,
+  potential_low: 60,
+  rating: 67,
+  badge: "dumpster",
   status: "player",
   photo: "",
   squad_place_id: squad.squad_places.find_by(number: 4)
@@ -142,13 +142,13 @@ Player.where(
 
 Player.where(
   first_name: "First",
-  last_name: "Roth",
-  nation: "GER",
+  last_name: "Fierro",
+  nation: "ITA",
   age: 18,
-  potential_high: 88,
-  potential_low: 80,
-  rating: 59,
-  badge: "sheild-alt",
+  potential_high: 83,
+  potential_low: 77,
+  rating: 60,
+  badge: "futbol",
   status: "player",
   photo: "",
   squad_place_id: squad.squad_places.find_by(number: 4)
