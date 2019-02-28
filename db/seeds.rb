@@ -181,3 +181,45 @@ Player.where(
   photo: "",
   squad_place_id: squad.squad_places.find_by(number: 5)
 ).first_or_create!
+
+Player.where(
+  first_name: "Sean",
+  last_name: "Longstaff",
+  nation: "ENG",
+  age: 21,
+  potential_high: 80,
+  potential_low: 72,
+  rating: 68,
+  badge: "futbol",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 6)
+).first_or_create!
+
+Player.where(
+  first_name: "First",
+  last_name: "Sepulveda",
+  nation: "ESP",
+  age: 17,
+  potential_high: 88,
+  potential_low: 82,
+  rating: 55,
+  badge: "sheild-alt",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 6)
+).first_or_create!
+
+Player.where(
+  first_name: "First",
+  last_name: "Graf",
+  nation: "GER",
+  age: 16,
+  potential_high: 94,
+  potential_low: 88,
+  rating: 55,
+  badge: "crown",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 6)
+).first_or_create!
