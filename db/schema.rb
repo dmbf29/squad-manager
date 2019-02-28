@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_25_101241) do
+ActiveRecord::Schema.define(version: 2019_02_28_093306) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,10 +45,18 @@ ActiveRecord::Schema.define(version: 2019_02_25_101241) do
   create_table "squad_places", force: :cascade do |t|
     t.string "name"
     t.integer "number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "squad_row_id"
+    t.index ["squad_row_id"], name: "index_squad_places_on_squad_row_id"
+  end
+
+  create_table "squad_rows", force: :cascade do |t|
+    t.string "number"
     t.bigint "squad_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["squad_id"], name: "index_squad_places_on_squad_id"
+    t.index ["squad_id"], name: "index_squad_rows_on_squad_id"
   end
 
   create_table "squads", force: :cascade do |t|
@@ -101,7 +109,8 @@ ActiveRecord::Schema.define(version: 2019_02_25_101241) do
   end
 
   add_foreign_key "players", "squad_places"
-  add_foreign_key "squad_places", "squads"
+  add_foreign_key "squad_places", "squad_rows"
+  add_foreign_key "squad_rows", "squads"
   add_foreign_key "squads", "formations"
   add_foreign_key "squads", "users"
 end
