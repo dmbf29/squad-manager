@@ -307,3 +307,47 @@ Player.where(
   photo: "",
   squad_place_id: squad.squad_places.find_by(number: 8)
 ).first_or_create!
+
+Player.where(
+  first_name: "Rolando",
+  last_name: "Aarons",
+  nation: "ENG",
+  age: 23,
+  potential_high: 77,
+  potential_low: 71,
+  rating: 71,
+  badge: "heart",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 9)
+).first_or_create!
+
+Player.where(
+  first_name: "Victor",
+  last_name: "Fernandez",
+  nation: "ESP",
+  age: 21,
+  potential_high: 80,
+  potential_low: 70,
+  rating: 69,
+  badge: "futbol",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 9)
+).first_or_create!
+
+Player.where(
+  first_name: "First",
+  last_name: "Moraes",
+  nation: "BRA",
+  age: 18,
+  potential_high: 94,
+  potential_low: 89,
+  rating: 64,
+  badge: "crown",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 9)
+).first_or_create!
+
+
