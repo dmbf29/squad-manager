@@ -23,7 +23,10 @@ unless user
 end
 
 squad = Squad.where(
-)
+  user: user,
+  name: "Newcastle Youth",
+  formation: Formation.find_by(number: "4-3-3"),
+).first_or_create!
 
 Player.where(
   first_name: "First",
@@ -36,7 +39,7 @@ Player.where(
   badge: "seedling",
   status: "player",
   photo: "",
-  squad_place_id: 1
+  squad_place_id: squad.squad_places.find_by(number: 1)
 ).first_or_create!
 
 
