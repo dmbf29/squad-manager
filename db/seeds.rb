@@ -204,8 +204,8 @@ Player.where(
   potential_high: 88,
   potential_low: 82,
   rating: 55,
-  badge: "sheild-alt",
-  status: "gem",
+  badge: "gem",
+  status: "player",
   photo: "",
   squad_place_id: squad.squad_places.find_by(number: 6)
 ).first_or_create!
