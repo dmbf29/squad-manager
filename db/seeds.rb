@@ -14,7 +14,32 @@ formations.each_with_index do |formation, index|
   ).first_or_create!
 end
 
-User.create!(
-  email: 'douglasmberkley@gmail.com',
-  password: ENV['ADMIN_PASSWORD']
+user = User.find_by(email: 'douglasmberkley@gmail.com')
+unless user
+  User.create!(
+    email: 'douglasmberkley@gmail.com',
+    password: ENV['ADMIN_PASSWORD']
+  )
+end
+
+squad = Squad.where(
 )
+
+Player.where(
+  first_name: "First",
+  last_name: "Wolff",
+  nation: "GER",
+  age: 16,
+  potential_high: 90,
+  potential_low: 80,
+  rating: 57,
+  badge: "seedling",
+  status: "player",
+  photo: "",
+  squad_place_id: 1
+).first_or_create!
+
+
+
+
+
