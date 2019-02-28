@@ -36,7 +36,7 @@ Player.where(
   potential_high: 90,
   potential_low: 80,
   rating: 57,
-  badge: "seedling",
+  badge: "gem",
   status: "player",
   photo: "",
   squad_place_id: squad.squad_places.find_by(number: 1)
@@ -106,7 +106,7 @@ Player.where(
   potential_high: 90,
   potential_low: 80,
   rating: 61,
-  badge: "star",
+  badge: "gem",
   status: "player",
   photo: "",
   squad_place_id: squad.squad_places.find_by(number: 3)
@@ -120,7 +120,7 @@ Player.where(
   potential_high: 88,
   potential_low: 80,
   rating: 59,
-  badge: "sheild-alt",
+  badge: "gem",
   status: "player",
   photo: "",
   squad_place_id: squad.squad_places.find_by(number: 3)
@@ -205,7 +205,7 @@ Player.where(
   potential_low: 82,
   rating: 55,
   badge: "sheild-alt",
-  status: "player",
+  status: "gem",
   photo: "",
   squad_place_id: squad.squad_places.find_by(number: 6)
 ).first_or_create!
@@ -232,7 +232,7 @@ Player.where(
   potential_high: 85,
   potential_low: 80,
   rating: 82,
-  badge: "heart",
+  badge: "sheild-alt",
   status: "player",
   photo: "",
   squad_place_id: squad.squad_places.find_by(number: 7)
@@ -264,4 +264,46 @@ Player.where(
   status: "prospect",
   photo: "",
   squad_place_id: squad.squad_places.find_by(number: 7)
+).first_or_create!
+
+Player.where(
+  first_name: "Jack",
+  last_name: "Colback",
+  nation: "ENG",
+  age: 17,
+  potential_high: 71,
+  potential_low: 71,
+  rating: 71,
+  badge: "lemon",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 8)
+).first_or_create!
+
+Player.where(
+  first_name: "First",
+  last_name: "Tavero",
+  nation: "ESP",
+  age: 17,
+  potential_high: 89,
+  potential_low: 82,
+  rating: 61,
+  badge: "gem",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 8)
+).first_or_create!
+
+Player.where(
+  first_name: "Daniel",
+  last_name: "Barlasar",
+  nation: "ENG",
+  age: 22,
+  potential_high: 70,
+  potential_low: 65,
+  rating: 63,
+  badge: "lemon",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 8)
 ).first_or_create!

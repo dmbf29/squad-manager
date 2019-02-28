@@ -11,8 +11,8 @@ class Squad < ApplicationRecord
     formation.dfs.times { positions << "DF"}
     formation.mfs.times { positions << "MF"}
     formation.fws.times { positions << "FW"}
-    positions << "Bench"
-    positions << "Other"
+    positions << "On Loan"
+    positions << "Left Out"
 
     SquadPlace.autocreate(positions, self)
   end
