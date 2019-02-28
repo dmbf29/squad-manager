@@ -75,7 +75,7 @@ Player.where(
   last_name: "Dummet",
   nation: "WAL",
   age: 27,
-  potential_high: 76s,
+  potential_high: 76,
   potential_low: 75,
   rating: 71,
   badge: "heart",
@@ -85,17 +85,71 @@ Player.where(
 ).first_or_create!
 
 Player.where(
-  first_name: "Freddie",
-  last_name: "Woodman",
+  first_name: "Adam",
+  last_name: "Wilson",
   nation: "ENG",
-  age: 18,
+  age: 19,
   potential_high: 80,
   potential_low: 75,
-  rating: 71,
+  rating: 67,
   badge: "futbol",
   status: "player",
   photo: "",
   squad_place_id: squad.squad_places.find_by(number: 2)
 ).first_or_create!
 
+Player.where(
+  first_name: "First",
+  last_name: "Schneider",
+  nation: "GER",
+  age: 18,
+  potential_high: 90,
+  potential_low: 80,
+  rating: 61,
+  badge: "star",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 3)
+).first_or_create!
 
+Player.where(
+  first_name: "First",
+  last_name: "Roth",
+  nation: "GER",
+  age: 18,
+  potential_high: 88,
+  potential_low: 80,
+  rating: 59,
+  badge: "sheild-alt",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 3)
+).first_or_create!
+
+Player.where(
+  first_name: "First",
+  last_name: "Roth",
+  nation: "GER",
+  age: 18,
+  potential_high: 88,
+  potential_low: 80,
+  rating: 59,
+  badge: "sheild-alt",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 4)
+).first_or_create!
+
+Player.where(
+  first_name: "First",
+  last_name: "Roth",
+  nation: "GER",
+  age: 18,
+  potential_high: 88,
+  potential_low: 80,
+  rating: 59,
+  badge: "sheild-alt",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 4)
+).first_or_create!
