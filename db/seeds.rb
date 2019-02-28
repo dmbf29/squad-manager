@@ -350,4 +350,44 @@ Player.where(
   squad_place_id: squad.squad_places.find_by(number: 9)
 ).first_or_create!
 
+Player.where(
+  first_name: "First",
+  last_name: "Schmidt",
+  nation: "GER",
+  age: 19,
+  potential_high: 89,
+  potential_low: 83,
+  rating: 67,
+  badge: "gem",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 10)
+).first_or_create!
 
+Player.where(
+  first_name: "Yannick",
+  last_name: "Toure",
+  nation: "SWI",
+  age: 19,
+  potential_high: 80,
+  potential_low: 72,
+  rating: 66,
+  badge: "futbol",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 10)
+).first_or_create!
+
+Player.where(
+  first_name: "Elias",
+  last_name: "Sorensen",
+  nation: "DEN",
+  age: 19,
+  potential_high: 80,
+  potential_low: 72,
+  rating: 64,
+  badge: "futbol",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 10)
+).first_or_create!
