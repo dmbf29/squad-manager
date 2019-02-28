@@ -5,11 +5,13 @@
   <div class="squad-list">
     <% @squad.players.each do |player| %>
       <div class="squad-list-row">
-        <div class="squad-player-badge">
-          <i class="fas fa-<%= player.badge %>"></i>
-        </div>
-        <div class="squad-player-name">
-          <p><%= player.full_name %></p>
+        <div class="squad-player-info">
+          <div class="squad-player-badge">
+            <i class="fas fa-<%= player.badge %>"></i>
+          </div>
+          <div class="squad-player-name">
+            <p><%= player.full_name %></p>
+          </div>
         </div>
         <div class="squad-player-positions">
           <% player.position_list.each do |position| %>

@@ -1,3 +1,9 @@
+.squad-container {
+  display: flex;
+  background-color: white;
+  padding: 15px;
+}
+
 .squad-header {
   display: flex;
 }
@@ -6,13 +12,27 @@
   flex: 33%;
   display: flex;
   flex-direction: column;
+  flex-grow: 0;
+  margin-right: 30px;
 }
 
 .squad-list-row {
+  p {
+    margin: 0;
+  }
   display: flex;
+  justify-content: space-between
 }
 
 .squad-body {
   display: flex;
   flex-direction: column;
+}
+
+.squad-player-info {
+  display: flex
+}
+
+.squad-player-stats {
+  display: flex;
 }

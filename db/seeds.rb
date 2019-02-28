@@ -36,7 +36,7 @@ Player.where(
   potential_high: 90,
   potential_low: 80,
   rating: 57,
-  badge: "gem",
+  badge: "seedling",
   status: "player",
   photo: "",
   squad_place_id: squad.squad_places.find_by(number: 1)
