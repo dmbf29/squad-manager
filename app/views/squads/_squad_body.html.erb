@@ -1,0 +1,12 @@
+<% @squad.squad_places.each do |squad_place| %>
+  <div class="squad-place-card" id="squad-place-card-<%= squad_place.id %>">
+    <h5><%= squad_place.name %></h5>
+    <ul>
+    <% squad_place.players.each do |player| %>
+      <div class="squad-player-card">
+        <lix  ><%= player.full_name %></lix >
+      </div>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

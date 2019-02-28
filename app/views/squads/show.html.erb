@@ -2,46 +2,10 @@
 </div>
 
 <div class="squad-container">
-  <div class="squad-list">
-    <% @squad.players.each do |player| %>
-      <div class="squad-list-row">
-        <div class="squad-player-info">
-          <div class="squad-player-badge">
-            <i class="fas fa-<%= player.badge %>"></i>
-          </div>
-          <div class="squad-player-name">
-            <p><%= player.full_name %></p>
-          </div>
-        </div>
-        <div class="squad-player-positions">
-          <% player.position_list.each do |position| %>
-            <span><%= position %></span>
-          <% end %>
-        </div>
-        <div class="squad-player-stats">
-          <div class="squad-player-rating">
-            <p><%= player.rating %></p>
-          </div>
-          <div class="squad-player-potential">
-            <p><%= "#{player.potential_low} - #{player.potential_high}" %></p>
-          </div>
-          <div class="squad-player-age">
-            <p><%= player.rating %></p>
-          </div>
-        </div>
-      </div>
-    <% end %>
+  <div class="squad-list" id="squad-list">
+    <%= render partial: 'squads/squad_list' %>
   </div>
-  <div class="squad-body">
-    <% @squad.squad_places.each do |squad_place| %>
-      <h5><%= squad_place.name %></h5>
-      <ul>
-      <% squad_place.players.each do |player| %>
-        <div class="squad-player-card">
-          <lix  ><%= player.full_name %></lix >
-        </div>
-      <% end %>
-      </ul>
-    <% end %>
+  <div class="squad-body" id="squad-body">
+    <%= render partial: 'squads/squad_body' %>
   </div>
 </div>
