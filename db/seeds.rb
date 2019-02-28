@@ -42,6 +42,33 @@ Player.where(
   squad_place_id: squad.squad_places.find_by(number: 1)
 ).first_or_create!
 
+Player.where(
+  first_name: "First",
+  last_name: "Schmidt",
+  nation: "GER",
+  age: 15,
+  potential_high: 94,
+  potential_low: 87,
+  rating: 60,
+  badge: "crown",
+  status: "prospect",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 1)
+).first_or_create!
+
+Player.where(
+  first_name: "Freddie",
+  last_name: "Woodman",
+  nation: "ENG",
+  age: 18,
+  potential_high: 80,
+  potential_low: 75,
+  rating: 71,
+  badge: "futbol",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_places.find_by(number: 1)
+).first_or_create!
 
 
 
