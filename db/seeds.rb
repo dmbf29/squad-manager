@@ -28,408 +28,408 @@ squad = Squad.where(
   formation: Formation.find_by(number: "4-3-3"),
 ).first_or_create!
 
-# Player.where(
-#   first_name: "First",
-#   last_name: "Wolff",
-#   nation: "GER",
-#   age: 16,
-#   potential_high: 90,
-#   potential_low: 80,
-#   rating: 57,
-#   badge: "seedling",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 1)
-# ).first_or_create!
+Player.where(
+  first_name: "First",
+  last_name: "Wolff",
+  nation: "GER",
+  age: 16,
+  potential_high: 90,
+  potential_low: 80,
+  rating: 57,
+  badge: "seedling",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "First",
-#   last_name: "Schmidt",
-#   nation: "GER",
-#   age: 15,
-#   potential_high: 94,
-#   potential_low: 87,
-#   rating: 60,
-#   badge: "crown",
-#   status: "prospect",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 1)
-# ).first_or_create!
+Player.where(
+  first_name: "First",
+  last_name: "Schmidt",
+  nation: "GER",
+  age: 15,
+  potential_high: 94,
+  potential_low: 87,
+  rating: 60,
+  badge: "crown",
+  status: "prospect",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Freddie",
-#   last_name: "Woodman",
-#   nation: "ENG",
-#   age: 18,
-#   potential_high: 80,
-#   potential_low: 75,
-#   rating: 71,
-#   badge: "futbol",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 1)
-# ).first_or_create!
+Player.where(
+  first_name: "Freddie",
+  last_name: "Woodman",
+  nation: "ENG",
+  age: 18,
+  potential_high: 80,
+  potential_low: 75,
+  rating: 71,
+  badge: "futbol",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Paul",
-#   last_name: "Dummet",
-#   nation: "WAL",
-#   age: 27,
-#   potential_high: 76,
-#   potential_low: 75,
-#   rating: 71,
-#   badge: "heart",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 2)
-# ).first_or_create!
+Player.where(
+  first_name: "Paul",
+  last_name: "Dummet",
+  nation: "WAL",
+  age: 27,
+  potential_high: 76,
+  potential_low: 75,
+  rating: 71,
+  badge: "heart",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Adam",
-#   last_name: "Wilson",
-#   nation: "ENG",
-#   age: 19,
-#   potential_high: 80,
-#   potential_low: 75,
-#   rating: 67,
-#   badge: "futbol",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 2)
-# ).first_or_create!
+Player.where(
+  first_name: "Adam",
+  last_name: "Wilson",
+  nation: "ENG",
+  age: 19,
+  potential_high: 80,
+  potential_low: 75,
+  rating: 67,
+  badge: "futbol",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "First",
-#   last_name: "Schneider",
-#   nation: "GER",
-#   age: 18,
-#   potential_high: 90,
-#   potential_low: 80,
-#   rating: 61,
-#   badge: "gem",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 3)
-# ).first_or_create!
+Player.where(
+  first_name: "First",
+  last_name: "Schneider",
+  nation: "GER",
+  age: 18,
+  potential_high: 90,
+  potential_low: 80,
+  rating: 61,
+  badge: "gem",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "First",
-#   last_name: "Roth",
-#   nation: "GER",
-#   age: 18,
-#   potential_high: 88,
-#   potential_low: 80,
-#   rating: 59,
-#   badge: "gem",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 3)
-# ).first_or_create!
+Player.where(
+  first_name: "First",
+  last_name: "Roth",
+  nation: "GER",
+  age: 18,
+  potential_high: 88,
+  potential_low: 80,
+  rating: 59,
+  badge: "gem",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Stefan",
-#   last_name: "O'Conner",
-#   nation: "ENG",
-#   age: 22,
-#   potential_high: 66,
-#   potential_low: 60,
-#   rating: 67,
-#   badge: "dumpster",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 4)
-# ).first_or_create!
+Player.where(
+  first_name: "Stefan",
+  last_name: "O'Conner",
+  nation: "ENG",
+  age: 22,
+  potential_high: 66,
+  potential_low: 60,
+  rating: 67,
+  badge: "dumpster",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 4).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "First",
-#   last_name: "Fierro",
-#   nation: "ITA",
-#   age: 18,
-#   potential_high: 83,
-#   potential_low: 77,
-#   rating: 60,
-#   badge: "futbol",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 4)
-# ).first_or_create!
+Player.where(
+  first_name: "First",
+  last_name: "Fierro",
+  nation: "ITA",
+  age: 18,
+  potential_high: 83,
+  potential_low: 77,
+  rating: 60,
+  badge: "futbol",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 4).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Jamie",
-#   last_name: "Sterry",
-#   nation: "ENG",
-#   age: 23,
-#   potential_high: 69,
-#   potential_low: 63,
-#   rating: 63,
-#   badge: "lemon",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 5)
-# ).first_or_create!
+Player.where(
+  first_name: "Jamie",
+  last_name: "Sterry",
+  nation: "ENG",
+  age: 23,
+  potential_high: 69,
+  potential_low: 63,
+  rating: 63,
+  badge: "lemon",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 5).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Lewis",
-#   last_name: "Cass",
-#   nation: "ENG",
-#   age: 20,
-#   potential_high: 74,
-#   potential_low: 68,
-#   rating: 60,
-#   badge: "lemon",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 5)
-# ).first_or_create!
+Player.where(
+  first_name: "Lewis",
+  last_name: "Cass",
+  nation: "ENG",
+  age: 20,
+  potential_high: 74,
+  potential_low: 68,
+  rating: 60,
+  badge: "lemon",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 5).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Sean",
-#   last_name: "Longstaff",
-#   nation: "ENG",
-#   age: 21,
-#   potential_high: 80,
-#   potential_low: 72,
-#   rating: 68,
-#   badge: "futbol",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 6)
-# ).first_or_create!
+Player.where(
+  first_name: "Sean",
+  last_name: "Longstaff",
+  nation: "ENG",
+  age: 21,
+  potential_high: 80,
+  potential_low: 72,
+  rating: 68,
+  badge: "futbol",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 6).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "First",
-#   last_name: "Sepulveda",
-#   nation: "ESP",
-#   age: 17,
-#   potential_high: 88,
-#   potential_low: 82,
-#   rating: 55,
-#   badge: "gem",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 6)
-# ).first_or_create!
+Player.where(
+  first_name: "First",
+  last_name: "Sepulveda",
+  nation: "ESP",
+  age: 17,
+  potential_high: 88,
+  potential_low: 82,
+  rating: 55,
+  badge: "gem",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 6).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "First",
-#   last_name: "Graf",
-#   nation: "GER",
-#   age: 16,
-#   potential_high: 94,
-#   potential_low: 88,
-#   rating: 55,
-#   badge: "crown",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 6)
-# ).first_or_create!
+Player.where(
+  first_name: "First",
+  last_name: "Graf",
+  nation: "GER",
+  age: 16,
+  potential_high: 94,
+  potential_low: 88,
+  rating: 55,
+  badge: "crown",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 6).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Miguel",
-#   last_name: "Almiron",
-#   nation: "GER",
-#   age: 25,
-#   potential_high: 85,
-#   potential_low: 80,
-#   rating: 82,
-#   badge: "sheild-alt",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 7)
-# ).first_or_create!
+Player.where(
+  first_name: "Miguel",
+  last_name: "Almiron",
+  nation: "GER",
+  age: 25,
+  potential_high: 85,
+  potential_low: 80,
+  rating: 82,
+  badge: "sheild-alt",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 7).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "First",
-#   last_name: "Conceicao",
-#   nation: "BRA",
-#   age: 17,
-#   potential_high: 94,
-#   potential_low: 89,
-#   rating: 62,
-#   badge: "crown",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 7)
-# ).first_or_create!
+Player.where(
+  first_name: "First",
+  last_name: "Conceicao",
+  nation: "BRA",
+  age: 17,
+  potential_high: 94,
+  potential_low: 89,
+  rating: 62,
+  badge: "crown",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 7).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "First",
-#   last_name: "Perez",
-#   nation: "ESP",
-#   age: 17,
-#   potential_high: 94,
-#   potential_low: 82,
-#   rating: 61,
-#   badge: "gem",
-#   status: "prospect",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 7)
-# ).first_or_create!
+Player.where(
+  first_name: "First",
+  last_name: "Perez",
+  nation: "ESP",
+  age: 17,
+  potential_high: 94,
+  potential_low: 82,
+  rating: 61,
+  badge: "gem",
+  status: "prospect",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 7).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Jack",
-#   last_name: "Colback",
-#   nation: "ENG",
-#   age: 17,
-#   potential_high: 71,
-#   potential_low: 71,
-#   rating: 71,
-#   badge: "lemon",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 8)
-# ).first_or_create!
+Player.where(
+  first_name: "Jack",
+  last_name: "Colback",
+  nation: "ENG",
+  age: 17,
+  potential_high: 71,
+  potential_low: 71,
+  rating: 71,
+  badge: "lemon",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 8).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "First",
-#   last_name: "Tavero",
-#   nation: "ESP",
-#   age: 17,
-#   potential_high: 89,
-#   potential_low: 82,
-#   rating: 61,
-#   badge: "gem",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 8)
-# ).first_or_create!
+Player.where(
+  first_name: "First",
+  last_name: "Tavero",
+  nation: "ESP",
+  age: 17,
+  potential_high: 89,
+  potential_low: 82,
+  rating: 61,
+  badge: "gem",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 8).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Daniel",
-#   last_name: "Barlasar",
-#   nation: "ENG",
-#   age: 22,
-#   potential_high: 70,
-#   potential_low: 65,
-#   rating: 63,
-#   badge: "lemon",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 8)
-# ).first_or_create!
+Player.where(
+  first_name: "Daniel",
+  last_name: "Barlasar",
+  nation: "ENG",
+  age: 22,
+  potential_high: 70,
+  potential_low: 65,
+  rating: 63,
+  badge: "lemon",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 8).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Rolando",
-#   last_name: "Aarons",
-#   nation: "ENG",
-#   age: 23,
-#   potential_high: 77,
-#   potential_low: 71,
-#   rating: 71,
-#   badge: "heart",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 9)
-# ).first_or_create!
+Player.where(
+  first_name: "Rolando",
+  last_name: "Aarons",
+  nation: "ENG",
+  age: 23,
+  potential_high: 77,
+  potential_low: 71,
+  rating: 71,
+  badge: "heart",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 9).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Victor",
-#   last_name: "Fernandez",
-#   nation: "ESP",
-#   age: 21,
-#   potential_high: 80,
-#   potential_low: 70,
-#   rating: 69,
-#   badge: "futbol",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 9)
-# ).first_or_create!
+Player.where(
+  first_name: "Victor",
+  last_name: "Fernandez",
+  nation: "ESP",
+  age: 21,
+  potential_high: 80,
+  potential_low: 70,
+  rating: 69,
+  badge: "futbol",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 9).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "First",
-#   last_name: "Moraes",
-#   nation: "BRA",
-#   age: 18,
-#   potential_high: 94,
-#   potential_low: 89,
-#   rating: 64,
-#   badge: "crown",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 9)
-# ).first_or_create!
+Player.where(
+  first_name: "First",
+  last_name: "Moraes",
+  nation: "BRA",
+  age: 18,
+  potential_high: 94,
+  potential_low: 89,
+  rating: 64,
+  badge: "crown",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 9).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "First",
-#   last_name: "Schmidt",
-#   nation: "GER",
-#   age: 19,
-#   potential_high: 89,
-#   potential_low: 83,
-#   rating: 67,
-#   badge: "gem",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 10)
-# ).first_or_create!
+Player.where(
+  first_name: "First",
+  last_name: "Schmidt",
+  nation: "GER",
+  age: 19,
+  potential_high: 89,
+  potential_low: 83,
+  rating: 67,
+  badge: "gem",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 10).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Yannick",
-#   last_name: "Toure",
-#   nation: "SWI",
-#   age: 19,
-#   potential_high: 80,
-#   potential_low: 72,
-#   rating: 66,
-#   badge: "futbol",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 10)
-# ).first_or_create!
+Player.where(
+  first_name: "Yannick",
+  last_name: "Toure",
+  nation: "SWI",
+  age: 19,
+  potential_high: 80,
+  potential_low: 72,
+  rating: 66,
+  badge: "futbol",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 10).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Elias",
-#   last_name: "Sorensen",
-#   nation: "DEN",
-#   age: 19,
-#   potential_high: 80,
-#   potential_low: 72,
-#   rating: 64,
-#   badge: "futbol",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 10)
-# ).first_or_create!
+Player.where(
+  first_name: "Elias",
+  last_name: "Sorensen",
+  nation: "DEN",
+  age: 19,
+  potential_high: 80,
+  potential_low: 72,
+  rating: 64,
+  badge: "futbol",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 10).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "First",
-#   last_name: "Neves",
-#   nation: "ESP",
-#   age: 17,
-#   potential_high: 94,
-#   potential_low: 89,
-#   rating: 68,
-#   badge: "crown",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 11)
-# ).first_or_create!
+Player.where(
+  first_name: "First",
+  last_name: "Neves",
+  nation: "ESP",
+  age: 17,
+  potential_high: 94,
+  potential_low: 89,
+  rating: 68,
+  badge: "crown",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 11).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "First",
-#   last_name: "Ramos",
-#   nation: "ESP",
-#   age: 18,
-#   potential_high: 94,
-#   potential_low: 85,
-#   rating: 67,
-#   badge: "crown",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 11)
-# ).first_or_create!
+Player.where(
+  first_name: "First",
+  last_name: "Ramos",
+  nation: "ESP",
+  age: 18,
+  potential_high: 94,
+  potential_low: 85,
+  rating: 67,
+  badge: "crown",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 11).squad_places.find_by(number: 1)
+).first_or_create!
 
-# Player.where(
-#   first_name: "Callum",
-#   last_name: "Roberts",
-#   nation: "ENG",
-#   age: 22,
-#   potential_high: 74,
-#   potential_low: 68,
-#   rating: 63,
-#   badge: "lemon",
-#   status: "player",
-#   photo: "",
-#   squad_place_id: squad.squad_places.find_by(number: 11)
-# ).first_or_create!
+Player.where(
+  first_name: "Callum",
+  last_name: "Roberts",
+  nation: "ENG",
+  age: 22,
+  potential_high: 74,
+  potential_low: 68,
+  rating: 63,
+  badge: "lemon",
+  status: "player",
+  photo: "",
+  squad_place_id: squad.squad_rows.find_by(number: 11).squad_places.find_by(number: 1)
+).first_or_create!

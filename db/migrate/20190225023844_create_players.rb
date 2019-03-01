@@ -10,6 +10,7 @@ class CreatePlayers < ActiveRecord::Migration[5.2]
       t.integer :rating
       t.string :badge
       t.integer :status
+      t.integer :order
       t.string :photo
       t.references :squad_place, foreign_key: true
 

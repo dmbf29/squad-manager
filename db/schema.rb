@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2019_02_28_093306) do
     t.integer "rating"
     t.string "badge"
     t.integer "status"
+    t.integer "order"
     t.string "photo"
     t.bigint "squad_place_id"
     t.datetime "created_at", null: false
