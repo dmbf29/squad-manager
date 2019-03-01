@@ -7,7 +7,7 @@
         </div>
         <div class="squad-place-player" id="squad-place-players-<%= place.id %>">
           <% place.players.each do |player| %>
-            <div class="squad-player-card" draggable="true" ondragstart="playerDragStartHandler(event);">
+            <div class="squad-player-card" draggable="true" ondragstart="playerDragStartHandler(event);" data-action="ondragstart->squadplace#playerDrag">
               <p><%= player.full_name %></p>
             </div>
           <% end %>
