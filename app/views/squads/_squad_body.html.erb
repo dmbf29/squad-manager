@@ -1,7 +1,7 @@
 <% @squad.squad_rows.order(number: :asc).each do |row| %>
   <div class="squad-row" id="squad-row-<%= row.id %>">
     <% row.squad_places.each do |place| %>
-      <div class="squad-place-card" id="squad-place-card-<%= place.id %>">
+      <div class="squad-place-card" id="squad-place-card-<%= place.id %>" data-controller="hello">
         <div class="squad-place-name">
           <h5><%= place.name %></h5>
         </div>
