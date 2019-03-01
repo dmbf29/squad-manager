@@ -47,6 +47,7 @@ class SquadRow < ApplicationRecord
           number: number,
           squad_row: self
         )
+      end
     when 1
       (1..squad.formation.fws.count).to_a.each do |number|
         SquadPlace.create(
@@ -54,6 +55,7 @@ class SquadRow < ApplicationRecord
           number: number,
           squad_row: self
         )
+      end
     end
   end
 end
