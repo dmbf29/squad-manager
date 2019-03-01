@@ -15,6 +15,7 @@ class SquadRow < ApplicationRecord
   after_create :build_squad_places
 
   def build_squad_places
+    binding.pry
     case number
     when 4
       SquadPlace.create(
@@ -33,26 +34,26 @@ class SquadRow < ApplicationRecord
         squad_row: self
       )
     when 3
-      (1..squad.formation.dfs.count).to_a.each do |number|
+      (1..squad.formation.dfs).to_a.each do |number|
         SquadPlace.create(
           name: "DF",
-          number: number,
+          number: number.to_i,
           squad_row: self
         )
       end
     when 2
-      (1..squad.formation.mfs.count).to_a.each do |number|
+      (1..squad.formation.mfs).to_a.each do |number|
         SquadPlace.create(
           name: "MF",
-          number: number,
+          number: number.to_i,
           squad_row: self
         )
       end
     when 1
-      (1..squad.formation.fws.count).to_a.each do |number|
+      (1..squad.formation.fws).to_a.each do |number|
         SquadPlace.create(
           name: "FW",
-          number: number,
+          number: number.to_i,
           squad_row: self
         )
       end

@@ -23,7 +23,7 @@ class Squad < ApplicationRecord
     return if squad_rows.count >= 4
     (1..4).to_a.each do |number|
       SquadRow.create(
-        number: number,
+        number: number.to_i,
         squad: self
       )
     end
