@@ -3,7 +3,7 @@ class CreateSquadRows < ActiveRecord::Migration[5.2]
     remove_reference :squad_places, :squad
 
     create_table :squad_rows do |t|
-      t.string :number
+      t.integer :number
       t.references :squad, foreign_key: true
 
       t.timestamps

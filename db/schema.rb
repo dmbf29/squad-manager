@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2019_02_28_093306) do
   end
 
   create_table "squad_rows", force: :cascade do |t|
-    t.string "number"
+    t.integer "number"
     t.bigint "squad_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
