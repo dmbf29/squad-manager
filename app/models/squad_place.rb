@@ -12,7 +12,7 @@
 
 class SquadPlace < ApplicationRecord
   belongs_to :squad
-  has_many :players
+  has_many :players, dependent: :destroy
 
   def self.autocreate(position_names, squad)
     position_names.each_with_index do |position_name, index|

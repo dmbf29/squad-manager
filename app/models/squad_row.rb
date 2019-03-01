@@ -11,7 +11,7 @@
 
 class SquadRow < ApplicationRecord
   belongs_to :squad
-  has_many :squad_places
+  has_many :squad_places, dependent: :destroy
   after_create :build_squad_places
 
   def build_squad_places
