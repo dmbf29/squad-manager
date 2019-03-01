@@ -29,7 +29,8 @@ class Player < ApplicationRecord
   end
 
   def give_order_number
-    return if order.nil?
+    return if order
+
     self.order = squad_place.players.count
     save
   end

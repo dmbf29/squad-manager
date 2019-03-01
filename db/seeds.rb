@@ -39,7 +39,7 @@ Player.where(
   badge: "seedling",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 4).squad_places.find_by(number: 1)
 ).first_or_create!
 
 Player.where(
@@ -53,7 +53,7 @@ Player.where(
   badge: "crown",
   status: "prospect",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 4).squad_places.find_by(number: 1)
 ).first_or_create!
 
 Player.where(
@@ -67,7 +67,7 @@ Player.where(
   badge: "futbol",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 4).squad_places.find_by(number: 1)
 ).first_or_create!
 
 Player.where(
@@ -81,7 +81,7 @@ Player.where(
   badge: "heart",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 1)
 ).first_or_create!
 
 Player.where(
@@ -95,7 +95,7 @@ Player.where(
   badge: "futbol",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 1)
 ).first_or_create!
 
 Player.where(
@@ -109,7 +109,7 @@ Player.where(
   badge: "gem",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 2)
 ).first_or_create!
 
 Player.where(
@@ -123,7 +123,7 @@ Player.where(
   badge: "gem",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 2)
 ).first_or_create!
 
 Player.where(
@@ -137,7 +137,7 @@ Player.where(
   badge: "dumpster",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 4).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 3)
 ).first_or_create!
 
 Player.where(
@@ -151,7 +151,7 @@ Player.where(
   badge: "futbol",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 4).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 3)
 ).first_or_create!
 
 Player.where(
@@ -165,7 +165,7 @@ Player.where(
   badge: "lemon",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 5).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 4)
 ).first_or_create!
 
 Player.where(
@@ -179,7 +179,7 @@ Player.where(
   badge: "lemon",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 5).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 4)
 ).first_or_create!
 
 Player.where(
@@ -193,7 +193,7 @@ Player.where(
   badge: "futbol",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 6).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 1)
 ).first_or_create!
 
 Player.where(
@@ -207,7 +207,7 @@ Player.where(
   badge: "gem",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 6).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 1)
 ).first_or_create!
 
 Player.where(
@@ -221,7 +221,7 @@ Player.where(
   badge: "crown",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 6).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 1)
 ).first_or_create!
 
 Player.where(
@@ -235,7 +235,7 @@ Player.where(
   badge: "sheild-alt",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 7).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 2)
 ).first_or_create!
 
 Player.where(
@@ -249,7 +249,7 @@ Player.where(
   badge: "crown",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 7).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 2)
 ).first_or_create!
 
 Player.where(
@@ -263,7 +263,7 @@ Player.where(
   badge: "gem",
   status: "prospect",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 7).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 2)
 ).first_or_create!
 
 Player.where(
@@ -277,7 +277,7 @@ Player.where(
   badge: "lemon",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 8).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 3)
 ).first_or_create!
 
 Player.where(
@@ -291,7 +291,7 @@ Player.where(
   badge: "gem",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 8).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 3)
 ).first_or_create!
 
 Player.where(
@@ -305,7 +305,7 @@ Player.where(
   badge: "lemon",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 8).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 3)
 ).first_or_create!
 
 Player.where(
@@ -319,7 +319,7 @@ Player.where(
   badge: "heart",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 9).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 1)
 ).first_or_create!
 
 Player.where(
@@ -333,7 +333,7 @@ Player.where(
   badge: "futbol",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 9).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 1)
 ).first_or_create!
 
 Player.where(
@@ -347,7 +347,7 @@ Player.where(
   badge: "crown",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 9).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 1)
 ).first_or_create!
 
 Player.where(
@@ -361,7 +361,7 @@ Player.where(
   badge: "gem",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 10).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 2)
 ).first_or_create!
 
 Player.where(
@@ -375,7 +375,7 @@ Player.where(
   badge: "futbol",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 10).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 2)
 ).first_or_create!
 
 Player.where(
@@ -389,7 +389,7 @@ Player.where(
   badge: "futbol",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 10).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 2)
 ).first_or_create!
 
 Player.where(
@@ -403,7 +403,7 @@ Player.where(
   badge: "crown",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 11).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 3)
 ).first_or_create!
 
 Player.where(
@@ -417,7 +417,7 @@ Player.where(
   badge: "crown",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 11).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 3)
 ).first_or_create!
 
 Player.where(
@@ -431,5 +431,5 @@ Player.where(
   badge: "lemon",
   status: "player",
   photo: "",
-  squad_place_id: squad.squad_rows.find_by(number: 11).squad_places.find_by(number: 1)
+  squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 3)
 ).first_or_create!
