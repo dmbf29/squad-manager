@@ -15,7 +15,7 @@ formations.each_with_index do |formation, index|
 end
 
 user = User.find_by(email: 'douglasmberkley@gmail.com')
-unless user
+if user.nil?
   User.create!(
     email: 'douglasmberkley@gmail.com',
     password: ENV['ADMIN_PASSWORD']

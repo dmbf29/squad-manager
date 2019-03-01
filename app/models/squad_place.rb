@@ -11,7 +11,7 @@
 #
 
 class SquadPlace < ApplicationRecord
-  belongs_to :squad
+  belongs_to :squad_row
   has_many :players, dependent: :destroy
 
   def self.autocreate(position_names, squad)

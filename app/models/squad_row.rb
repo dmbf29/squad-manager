@@ -15,7 +15,6 @@ class SquadRow < ApplicationRecord
   after_create :build_squad_places
 
   def build_squad_places
-    binding.pry
     case number
     when 4
       SquadPlace.create(
