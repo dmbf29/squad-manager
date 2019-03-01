@@ -1,12 +1,18 @@
-<% @squad.squad_places.each do |squad_place| %>
-  <div class="squad-place-card" id="squad-place-card-<%= squad_place.id %>">
-    <h5><%= squad_place.name %></h5>
-    <ul>
-    <% squad_place.players.each do |player| %>
-      <div class="squad-player-card">
-        <lix  ><%= player.full_name %></lix >
+<% @squad.squad_rows.order(number: :asc).each do |row| %>
+  <div class="squad-row" id="squad-row-<%= row.id %>">
+    <% row.squad_places.each do |place| %>
+      <div class="squad-place-card" id="squad-place-card-<%= place.id %>">
+        <div class="squad-place-name">
+          <h5><%= place.name %></h5>
+        </div>
+        <div class="squad-place-player" id="squad-place-players-<%= place.id %>">
+          <% place.players.each do |player| %>
+            <div class="squad-player-card">
+              <p><%= player.full_name %></p>
+            </div>
+          <% end %>
+        </div>
       </div>
     <% end %>
-    </ul>
   </div>
 <% end %>
