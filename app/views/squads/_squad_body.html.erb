@@ -5,10 +5,15 @@
         <div class="squad-place-name">
           <h5><%= place.name %></h5>
         </div>
-        <div class="squad-place-player" id="squad-place-players-<%= place.id %>">
+        <div class="squad-place-player" id="squad-place-players-<%= place.id %>" data-action="drop->squadplace#playerDropHandler dragover->squadplace#playerDragOverHandler" data-id="<%= place.id %>">
           <% place.players.each do |player| %>
-            <div class="squad-player-card" draggable="true"  data-action="dragstart->squadplace#playerDrag">
+            <div id="player-<%= player.id %>" class="squad-player-card" draggable="true"  data-action="dragstart->squadplace#playerDragHandler">
               <p><%= player.full_name %></p>
+              <div class="squad-player-form">
+                <%= simple_form_for player do |f| %>
+                  <% f.input :squad_place, as: :hidden %>
+                <% end %>
+              </div>
             </div>
           <% end %>
         </div>
