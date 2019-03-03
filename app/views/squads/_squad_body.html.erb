@@ -4,9 +4,6 @@
       <div class="squad-place-card" id="squad-place-card-<%= place.id %>" data-controller="squadplace">
         <div class="squad-place-name">
           <h5><%= place.name %></h5>
-          <%= link_to new_squad_place_player_path(place) do %>
-            <i class="fas fa-plus"></i>
-          <% end %>
         </div>
         <div class="squad-place-player" id="squad-place-players-<%= place.id %>" data-action="drop->squadplace#playerDropHandler dragover->squadplace#playerDragOverHandler" data-id="<%= place.id %>">
           <% place.players.order(rating: :desc).each do |player| %>
@@ -16,7 +13,7 @@
                 <p><%= player.rating %></p>
               </div>
               <div class="squad-player-form">
-                <%= simple_form_for(player, remote: true) do |f| %>
+                <%= simple_form_for [@squad, player] do |f| %>
                   <% f.input :squad_place_id, as: :hidden %>
                 <% end %>
               </div>

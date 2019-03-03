@@ -4,6 +4,9 @@
       </div>
       <div class="squad-player-name">
         <p>Name</p>
+        <%= link_to new_squad_player_path(@squad) do %>
+          <i class="fas fa-plus"></i>
+        <% end %>
       </div>
     </div>
     <div class="squad-player-positions">
@@ -27,7 +30,7 @@
         <i class="fas fa-<%= player.badge %>"></i>
       </div>
       <div class="squad-player-name">
-        <p><%= player.full_name %></p>
+        <p><%= link_to player.full_name, edit_squad_player_path(@squad, player) %></p>
       </div>
     </div>
     <div class="squad-player-positions">

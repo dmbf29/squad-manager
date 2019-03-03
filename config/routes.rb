@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'squads#index'
-  resources :squads
-  resources :players, only: [:edit, :update, :delete]
+  resources :squads do
+    resources :players, only: [:new, :create, :edit, :update]
+  end
+  resources :players, only: [:delete]
   resources :squad_places, only: [:edit, :update] do
-    resources :players, only: [:new, :create]
   end
 end

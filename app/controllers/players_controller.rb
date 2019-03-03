@@ -1,19 +1,24 @@
 class PlayersController < ApplicationController
 
   def new
-    @squad_place = SquadPlace.find_by(params[:squad_place])
+    @squad = Squad.find_by(params[:squad])
     @player = Player.new
   end
 
   def create
-    @squad_place = SquadPlace.find_by(params[:squad_place])
+    @squad = Squad.find_by(params[:squad])
     @player = Player.new(player_params)
-    @player.squad_place = @squad_place
+    @player.squad = @squad
     if @player.save
-      redirect_to squad_path(@player.squad_place.squad_row.squad)
+      redirect_to squad_path(@squad)
     else
       render :new
     end
+  end
+
+  def edit
+    @player = Player.find(params[:id])
+    @squad = @player.squad_place.squad_row.squad
   end
 
   def update
