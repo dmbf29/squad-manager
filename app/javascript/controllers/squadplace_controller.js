@@ -36,6 +36,6 @@ export default class extends Controller {
     const data = event.dataTransfer.getData("text/plain");
     const player = document.getElementById(data);
     event.target.appendChild(player);
-    console.log(player.querySelector('form'))
+    const playerForm = player.querySelector('form'))
   }
 }
