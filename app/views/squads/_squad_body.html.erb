@@ -10,7 +10,7 @@
             <div id="player-<%= player.id %>" class="squad-player-card" draggable="true"  data-action="dragstart->squadplace#playerDragHandler">
               <p><%= player.full_name %></p>
               <div class="squad-player-form">
-                <%= simple_form_for player do |f| %>
+                <%= simple_form_for player, remote: true do |f| %>
                   <% f.input :squad_place, as: :hidden %>
                 <% end %>
               </div>
