@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h1>Add Player</h1>
+      <%= simple_form_for [@squad_place, @player] do |f| %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :nation %>
+        <%= f.input :age %>
+        <%= f.input :potential_low %>
+        <%= f.input :potential_high %>
+        <%= f.input :rating %>
+        <%= f.input :badge, collection: Player::BADGES %>
+        <%= f.input :status %>
+        <%= f.submit class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

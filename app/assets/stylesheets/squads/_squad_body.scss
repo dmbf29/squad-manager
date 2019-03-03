@@ -4,6 +4,12 @@
   margin-bottom: 10px;
 }
 
+.squad-place-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .squad-place-card {
   margin-right: 10px;
   min-width: 150px;
@@ -11,4 +17,5 @@
 
 .player-card-name {
   display: flex;
+  justify-content: space-between;
 }

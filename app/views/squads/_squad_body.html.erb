@@ -4,12 +4,14 @@
       <div class="squad-place-card" id="squad-place-card-<%= place.id %>" data-controller="squadplace">
         <div class="squad-place-name">
           <h5><%= place.name %></h5>
+          <%= link_to new_squad_place_player_path(place) do %>
+            <i class="fas fa-plus"></i>
+          <% end %>
         </div>
         <div class="squad-place-player" id="squad-place-players-<%= place.id %>" data-action="drop->squadplace#playerDropHandler dragover->squadplace#playerDragOverHandler" data-id="<%= place.id %>">
           <% place.players.order(rating: :desc).each do |player| %>
             <div id="player-<%= player.id %>" class="squad-player-card" draggable="true"  data-action="dragstart->squadplace#playerDragHandler">
               <div class="player-card-name">
-                <i class="fas fa-<%= player.badge %>"></i>
                 <p><%= player.last_name %></p>
                 <p><%= player.rating %></p>
               </div>
