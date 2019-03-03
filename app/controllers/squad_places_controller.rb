@@ -1,2 +1,0 @@
-class SquadPlacesController < ApplicationController
-end
