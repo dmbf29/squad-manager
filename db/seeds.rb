@@ -232,7 +232,7 @@ Player.where(
   potential_high: 85,
   potential_low: 80,
   rating: 82,
-  badge: "sheild-alt",
+  badge: "shield-alt",
   status: "player",
   photo: "",
   squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 2)

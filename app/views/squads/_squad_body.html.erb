@@ -6,9 +6,13 @@
           <h5><%= place.name %></h5>
         </div>
         <div class="squad-place-player" id="squad-place-players-<%= place.id %>" data-action="drop->squadplace#playerDropHandler dragover->squadplace#playerDragOverHandler" data-id="<%= place.id %>">
-          <% place.players.each do |player| %>
+          <% place.players.order(rating: :desc).each do |player| %>
             <div id="player-<%= player.id %>" class="squad-player-card" draggable="true"  data-action="dragstart->squadplace#playerDragHandler">
-              <p><%= player.full_name %></p>
+              <div class="player-card-name">
+                <i class="fas fa-<%= player.badge %>"></i>
+                <p><%= player.last_name %></p>
+                <p><%= player.rating %></p>
+              </div>
               <div class="squad-player-form">
                 <%= simple_form_for(player, remote: true) do |f| %>
                   <% f.input :squad_place_id, as: :hidden %>
