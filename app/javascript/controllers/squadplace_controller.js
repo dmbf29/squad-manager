@@ -31,11 +31,19 @@ export default class extends Controller {
     // // console.log(event.target.querySelector('form'));
     // console.log(data);
     event.preventDefault();
-    console.log(event.currentTarget);
+    // console.log(event.currentTarget);
     // Get the id of the target and add the moved element to the target's DOM
     const data = event.dataTransfer.getData("text/plain");
     const player = document.getElementById(data);
+    console.log(player);
+    const playerForm = player.querySelector('form');
     event.target.appendChild(player);
-    const playerForm = player.querySelector('form'))
+    // TODO: Replace ID in form with new squad_place
+    // console.log("target")
+    // console.log(event.target.dataset.id)
+    // console.log("currentTarget")
+    // console.log(event.currentTarget.dataset.id)
+    playerForm.querySelector('#player_squad_place_id').value = event.currentTarget.dataset.id;
+    playerForm.submit(function(event) { return false });
   }
 }
