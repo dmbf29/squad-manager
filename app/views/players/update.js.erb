@@ -1,1 +1,16 @@
-update.js.erb
+function refreshForm(innerHTML) {
+  const newReviewForm = document.getElementById('new_review');
+  newReviewForm.innerHTML = innerHTML;
+}
+
+function addPlayer(reviewHTML) {
+  const squadPlaces = document.getElementById('squad-place-card-<%= player.squad_place.id %>');
+  squadPlaces.innerHTML = reviewHTML;
+}
+
+<% if @player.errors.any? %>
+  // refreshForm('<%= j render "reviews/form", restaurant: @restaurant, review: @review %>');
+<% else %>
+  addPlayer('<%= j render "squad_places/index" %>');
+  // refreshForm('<%= j render "reviews/form", restaurant: @restaurant, review: Review.new %>');
+<% end %>
