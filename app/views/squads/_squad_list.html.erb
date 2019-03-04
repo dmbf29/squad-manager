@@ -23,31 +23,35 @@
       </div>
     </div>
   </div>
-<% @squad.players.each do |player| %>
-  <div class="squad-list-row">
-    <div class="squad-player-info">
-      <div class="squad-player-badge">
-        <i class="fas fa-<%= player.badge %>"></i>
+<% @squad.squad_rows.each do |squad_row| %>
+  <div class="squad-list-row-wrapper">
+    <% squad_row.players.each do |player| %>
+      <div class="squad-list-row">
+        <div class="squad-player-info">
+          <div class="squad-player-badge">
+            <i class="fas fa-<%= player.badge %>"></i>
+          </div>
+          <div class="squad-player-name">
+            <p><%= link_to player.full_name, edit_squad_player_path(@squad, player) %></p>
+          </div>
+        </div>
+        <div class="squad-player-positions">
+          <% player.position_list.each do |position| %>
+            <span><%= position %></span>
+          <% end %>
+        </div>
+        <div class="squad-player-stats">
+          <div class="squad-player-rating">
+            <p><%= player.rating %></p>
+          </div>
+          <div class="squad-player-potential">
+            <p><%= "#{player.potential_low} - #{player.potential_high}" %></p>
+          </div>
+          <div class="squad-player-age">
+            <p><%= player.age %></p>
+          </div>
+        </div>
       </div>
-      <div class="squad-player-name">
-        <p><%= link_to player.full_name, edit_squad_player_path(@squad, player) %></p>
-      </div>
-    </div>
-    <div class="squad-player-positions">
-      <% player.position_list.each do |position| %>
-        <span><%= position %></span>
-      <% end %>
-    </div>
-    <div class="squad-player-stats">
-      <div class="squad-player-rating">
-        <p><%= player.rating %></p>
-      </div>
-      <div class="squad-player-potential">
-        <p><%= "#{player.potential_low} - #{player.potential_high}" %></p>
-      </div>
-      <div class="squad-player-age">
-        <p><%= player.age %></p>
-      </div>
-    </div>
+    <% end %>
   </div>
 <% end %>
