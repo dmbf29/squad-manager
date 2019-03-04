@@ -24,7 +24,7 @@ class Player < ApplicationRecord
   enum status: [:player, :prospect, :youth]
   after_create :give_order_number
 
-  BADGES = ["futbol", "seedling", "crown", "heart", "gem", "trash", "lemon", "shield-alt"]
+  BADGES = ["futbol", "seedling", "star", "crown", "heart", "gem", "trash", "lemon", "shield-alt"]
 
   def full_name
     "#{first_name} #{last_name}"

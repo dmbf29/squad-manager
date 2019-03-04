@@ -7,7 +7,7 @@
   <%= f.input :potential_high %>
   <%= f.input :rating %>
   <%= f.input :badge, collection: Player::BADGES %>
-  <%= f.input :status %>
+  <%= f.input :status, collection: Player.statuses.keys %>
   <%= f.association :squad_place, collection: @squad.squad_places  %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>

@@ -12,14 +12,14 @@
     <div class="squad-player-positions">
     </div>
     <div class="squad-player-stats">
+      <div class="squad-player-age">
+        <p>A</p>
+      </div>
       <div class="squad-player-rating">
         <p>R</p>
       </div>
       <div class="squad-player-potential">
         <p>P</p>
-      </div>
-      <div class="squad-player-age">
-        <p>Age</p>
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@
             <i class="fas fa-<%= player.badge %>"></i>
           </div>
           <div class="squad-player-name">
-            <p><%= link_to player.full_name, edit_squad_player_path(@squad, player) %></p>
+            <p><%= link_to player.full_name, edit_squad_player_path(@squad, player) %>  <%= flag_icon(player.nation.downcase.to_sym) %></p>
           </div>
         </div>
         <div class="squad-player-positions">
@@ -41,14 +41,14 @@
           <% end %>
         </div>
         <div class="squad-player-stats">
+          <div class="squad-player-age">
+            <p><%= player.age %></p>
+          </div>
           <div class="squad-player-rating">
             <p><%= player.rating %></p>
           </div>
           <div class="squad-player-potential">
             <p><%= "#{player.potential_low} - #{player.potential_high}" %></p>
-          </div>
-          <div class="squad-player-age">
-            <p><%= player.age %></p>
           </div>
         </div>
       </div>

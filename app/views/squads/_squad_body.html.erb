@@ -6,18 +6,22 @@
           <h5><%= link_to place.name, edit_squad_place_path(place) %></h5>
         </div>
         <div class="squad-place-player" id="squad-place-players-<%= place.id %>" data-action="drop->squadplace#playerDropHandler dragover->squadplace#playerDragOverHandler" data-id="<%= place.id %>">
-          <% place.players.order(rating: :desc).each do |player| %>
-            <div id="player-<%= player.id %>" class="squad-player-card" draggable="true"  data-action="dragstart->squadplace#playerDragHandler">
-              <div class="player-card-name">
-                <p><%= player.last_name %></p>
-                <p><%= player.rating %></p>
+          <% if place.players.empty? %>
+            <p>-</p>
+          <% else %>
+            <% place.players.order(rating: :desc).each do |player| %>
+              <div id="player-<%= player.id %>" class="squad-player-card" draggable="true"  data-action="dragstart->squadplace#playerDragHandler">
+                <div class="player-card-name">
+                  <p><%= player.last_name %></p>
+                  <p><%= player.rating %></p>
+                </div>
+                <div class="squad-player-form">
+                  <%= simple_form_for [@squad, player] do |f| %>
+                    <% f.input :squad_place_id, as: :hidden %>
+                  <% end %>
+                </div>
               </div>
-              <div class="squad-player-form">
-                <%= simple_form_for [@squad, player] do |f| %>
-                  <% f.input :squad_place_id, as: :hidden %>
-                <% end %>
-              </div>
-            </div>
+            <% end %>
           <% end %>
         </div>
       </div>

@@ -38,6 +38,9 @@
 
 .squad-player-stats {
   display: flex;
+  justify-content: space-between;
+  flex: 40%;
+  flex-grow: 0;
 }
 
 .squad-place-card {

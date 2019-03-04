@@ -8,7 +8,6 @@ class PlayersController < ApplicationController
   def create
     @squad = Squad.find_by(params[:squad])
     @player = Player.new(player_params)
-    @player.squad = @squad
     if @player.save
       redirect_to squad_path(@squad)
     else
