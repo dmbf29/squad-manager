@@ -3,7 +3,7 @@
     <% row.squad_places.each do |place| %>
       <div class="squad-place-card" id="squad-place-card-<%= place.id %>" data-controller="squadplace">
         <div class="squad-place-name">
-          <h5><%= link_to place.name edit_squad_place_path(place) %></h5>
+          <h5><%= link_to place.name, edit_squad_place_path(place) %></h5>
         </div>
         <div class="squad-place-player" id="squad-place-players-<%= place.id %>" data-action="drop->squadplace#playerDropHandler dragover->squadplace#playerDragOverHandler" data-id="<%= place.id %>">
           <% place.players.order(rating: :desc).each do |player| %>

@@ -15,6 +15,10 @@ class SquadRow < ApplicationRecord
   has_many :players, through: :squad_places
   after_create :build_squad_places
 
+  def to_label
+    number
+  end
+
   def build_squad_places
     case number
     when 4
