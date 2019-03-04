@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'squad_places/edit'
   devise_for :users
   root to: 'squads#index'
   resources :squads do
