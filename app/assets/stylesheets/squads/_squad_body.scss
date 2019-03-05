@@ -43,6 +43,12 @@
   border-left: 3px solid $blue;
   height: 100%;
   box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  display: flex;
+  flex-direction: column
+}
+
+.squad-place-player {
+  flex-grow: 1;
 }
 
 .squad-player-card {

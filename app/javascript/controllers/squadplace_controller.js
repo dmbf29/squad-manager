@@ -16,6 +16,7 @@ export default class extends Controller {
 
   playerDragOverHandler(event) {
     // event.preventDefault();
+    console.log(event.target);
     // event.dataTransfer.dropEffect = 'copy';
     // console.log("I'm dragging over!");
     event.preventDefault();
