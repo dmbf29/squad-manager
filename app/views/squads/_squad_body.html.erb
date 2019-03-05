@@ -11,14 +11,24 @@
           <% else %>
             <% place.players.order(rating: :desc).each do |player| %>
               <div id="player-<%= player.id %>" class="squad-player-card" draggable="true"  data-action="dragstart->squadplace#playerDragHandler">
-                <div class="player-card-name">
-                  <p><%= player.last_initial %></p>
-                  <p><%= player.rating %></p>
+                <div class="player-card-avatar">
+                  <i class="fas fa-user-circle"></i>
                 </div>
-                <div class="squad-player-form">
-                  <%= simple_form_for [@squad, player] do |f| %>
-                    <% f.input :squad_place_id, as: :hidden %>
-                  <% end %>
+                <div class="player-card-info">
+                  <div class="player-card-first">
+                    <p><%= player.first_name %></p>
+                  </div>
+                  <div class="player-card-name">
+                    <p><%= player.last_name %></p>
+                  </div>
+                </div>
+                <div class="player-card-rating">
+                  <p><%= player.rating %></p>
+                  <div class="squad-player-form">
+                    <%= simple_form_for [@squad, player] do |f| %>
+                      <% f.input :squad_place_id, as: :hidden %>
+                    <% end %>
+                  </div>
                 </div>
               </div>
             <% end %>

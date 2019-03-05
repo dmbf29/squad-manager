@@ -39,19 +39,74 @@
 
 .squad-place-card {
   margin-right: 10px;
-  min-width: 150px;
+  min-width: 200px;
   border-left: 3px solid $blue;
   height: 100%;
   box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
 }
 
+.squad-player-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  align-items: center;
+  border-bottom: 1px solid $light-gray;
+  &:hover {
+    cursor: move;
+    background-color: $light-gray;
+  }
+}
+.squad-player-card:last-child {
+  border-bottom: none;
+}
+.squad-player-card:first-child {
+  padding: 0 5px 10px 5px;
+}
+.player-card-positions {
+  display: flex;
+}
+
 .player-card-name {
   display: flex;
   justify-content: space-between;
-  &:hover {
-    cursor: move;
-  }
   p {
     margin: 0;
   }
 }
+.player-card-avatar {
+  flex: 20%;
+  flex-grow: 0;
+  font-size: 1.7em;
+}
+
+.player-card-rating {
+  // color: white;
+  // font-weight: bold;
+  flex: 20%;
+  flex-grow: 0;
+  p {
+    margin: 0;
+    padding: 5px;
+    background-color: $light-gray;
+    border-radius: 5px;
+  }
+}
+.player-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 10px;
+  p {
+    margin: 0
+  }
+}
+
+.player-card-first {
+  font-weight: lighter;
+}
+
+
+
+
+
