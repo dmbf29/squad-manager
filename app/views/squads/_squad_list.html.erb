@@ -1,17 +1,15 @@
 <div class="squad-list-row-header">
   <div class="squad-player-info">
     <div class="squad-player-basic">
-      <div class="squad-player-badge">
-        <p>Name</p>
-      </div>
-      <div class="squad-player-name">
-        <%= link_to new_squad_player_path(@squad) do %>
-          <i class="fas fa-plus"></i>
+      <p>Player</p>
+      <div class="squad-player-name" style="margin-left:10px;font-weight: bold;">
+        <%= link_to new_squad_player_path(@squad), class: "color-red" do %>
+          <i class="fas fa-plus color-red"></i>
         <% end %>
       </div>
     </div>
   </div>
-  <div class="squad-player-stats">
+  <div class="squad-player-stats-header">
     <div class="squad-player-age" style="margin-left: 3px;">
       <p>A</p>
     </div>
@@ -33,7 +31,7 @@
               <i class="fas fa-<%= player.badge %>"></i>
             </div>
             <div class="squad-player-name">
-              <p><%= link_to player.full_name, edit_squad_player_path(@squad, player) %>  <%= flag_icon(player.nation.downcase.to_sym) %></p>
+              <p><%= link_to player.full_name, edit_squad_player_path(@squad, player) %></p>
             </div>
           </div>
           <div class="squad-player-positions">
