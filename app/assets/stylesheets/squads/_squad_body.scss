@@ -23,6 +23,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $blue;
   a {
     color: $blue;
   }
@@ -48,5 +50,8 @@
   justify-content: space-between;
   &:hover {
     cursor: move;
+  }
+  p {
+    margin: 0;
   }
 }

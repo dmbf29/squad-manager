@@ -12,7 +12,7 @@
             <% place.players.order(rating: :desc).each do |player| %>
               <div id="player-<%= player.id %>" class="squad-player-card" draggable="true"  data-action="dragstart->squadplace#playerDragHandler">
                 <div class="player-card-name">
-                  <p><%= player.last_name %></p>
+                  <p><%= player.last_initial %></p>
                   <p><%= player.rating %></p>
                 </div>
                 <div class="squad-player-form">

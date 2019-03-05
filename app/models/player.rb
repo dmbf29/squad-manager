@@ -31,6 +31,10 @@ class Player < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
+  def last_initial
+    "#{first_name[0]}. #{last_name}"
+  end
+
   def give_order_number
     return if order
 
