@@ -23,7 +23,7 @@
 </div>
 <% @squad.squad_rows.each do |squad_row| %>
   <div class="squad-list-row-wrapper">
-    <% squad_row.players.each do |player| %>
+    <% squad_row.players.order(rating: :desc).each do |player| %>
       <div class="squad-list-row">
         <div class="squad-player-info">
           <div class="squad-player-basic">
