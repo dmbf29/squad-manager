@@ -5,7 +5,7 @@
         <div class="squad-place-name">
           <h5><%= link_to place.name, edit_squad_place_path(place) %></h5>
         </div>
-        <div class="squad-place-player" id="squad-place-players-<%= place.id %>" data-action="drop->squadplace#playerDropHandler dragover->squadplace#playerDragOverHandler" data-id="<%= place.id %>">
+        <div class="squad-place-player" id="squad-place-players-<%= place.id %>" data-action="drop->squadplace#playerDropHandler dragover->squadplace#playerDragOverHandler dragexit->squadplace#playerDragExitHandler" data-id="<%= place.id %>">
           <% if place.players.empty? %>
             <p>-</p>
           <% else %>

@@ -14,9 +14,14 @@ export default class extends Controller {
     event.dropEffect = "move";
   }
 
+  playerDragExitHandler(event) {
+    console.log("exiT!!!")
+    event.currentTarget.classList.remove('gray-background')
+  }
+
   playerDragOverHandler(event) {
     // event.preventDefault();
-    console.log(event.target);
+    event.currentTarget.classList.add('gray-background')
     // event.dataTransfer.dropEffect = 'copy';
     // console.log("I'm dragging over!");
     event.preventDefault();
