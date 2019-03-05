@@ -44,7 +44,7 @@ export default class extends Controller {
     const player = document.getElementById(data);
     console.log(player);
     const playerForm = player.querySelector('form');
-    event.target.appendChild(player);
+    event.currentTarget.appendChild(player);
     // TODO: Replace ID in form with new squad_place
     // console.log("target")
     // console.log(event.target.dataset.id)
