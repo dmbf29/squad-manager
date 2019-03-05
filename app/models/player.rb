@@ -26,6 +26,7 @@ class Player < ApplicationRecord
 
   POSITIONS = %w(GK LB CB RB DM LM CM RM CAM LW CF ST RW)
   BADGES = ["futbol", "seedling", "star", "crown", "heart", "gem", "trash", "lemon", "shield-alt"]
+  FACES = %w(face_1 face_2 face_3 face_4 face_5 face_6 face_7)
 
   def full_name
     "#{first_name} #{last_name}"
