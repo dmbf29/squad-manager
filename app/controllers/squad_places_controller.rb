@@ -13,6 +13,14 @@ class SquadPlacesController < ApplicationController
     end
   end
 
+  def destroy
+    @squad_place = SquadPlace.find(params[:id])
+    if @squad_place.players.empty?
+      @squad_place.destroy
+      redirect_to squad_path(@squad_place.squad_row.squad)
+    end
+  end
+
   private
 
   def squad_place_params

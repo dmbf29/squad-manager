@@ -3,6 +3,10 @@
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <h1>Update Squad Place</h1>
       <%= render 'form' %>
+      <div style="margin-top: 20px"></div>
+      <%= link_to squad_place_path(@squad_place), method: :delete do %>
+        <i class="fas fa-trash-alt"></i> Remove
+      <% end %>
     </div>
   </div>
 </div>

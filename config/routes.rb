@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     resources :squad_rows, only: [:new, :create, :edit, :update]
   end
   resources :players, only: [:delete]
-  resources :squad_places, only: [:edit, :update] do
+  resources :squad_places, only: [:edit, :update, :destroy] do
   end
 end
