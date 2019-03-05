@@ -12,7 +12,11 @@
             <% place.players.order(rating: :desc).each do |player| %>
               <div id="player-<%= player.id %>" class="squad-player-card" draggable="true"  data-action="dragstart->squadplace#playerDragHandler">
                 <div class="player-card-avatar">
-                  <i class="fas fa-user-circle"></i>
+                  <% if player.photo.blank? %>
+                    <%= image_tag "face_7.png" %>
+                  <% else %>
+                    <%= image_tag player.photo %>
+                  <% end %>
                 </div>
                 <div class="player-card-info">
                   <div class="player-card-first">

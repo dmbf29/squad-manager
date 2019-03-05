@@ -77,6 +77,10 @@
   flex: 20%;
   flex-grow: 0;
   font-size: 1.7em;
+  img {
+    width: 27px;
+    border-radius: 50%;
+  }
 }
 
 .player-card-rating {
