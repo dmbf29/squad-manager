@@ -24,6 +24,15 @@
   display: flex;
   justify-content: space-between;
 }
+.squad-list-row-header {
+  p {
+    margin: 0;
+  }
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
 .squad-list-row-wrapper {
   padding: 10px 0;
 }
@@ -56,6 +65,7 @@
   flex: 23px;
   margin-right: 5px;
   text-align: center;
+  color: $gray;
 }
 
 .squad-player-stats {
