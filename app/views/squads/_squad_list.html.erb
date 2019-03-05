@@ -1,34 +1,34 @@
-<div class="squad-list-row">
-    <div class="squad-player-info">
+<div class="squad-list-row" style="font-weight: bold;">
+  <div class="squad-player-info">
+    <div class="squad-player-basic">
       <div class="squad-player-badge">
+        <p>Name</p>
       </div>
       <div class="squad-player-name">
-        <p>Name</p>
         <%= link_to new_squad_player_path(@squad) do %>
           <i class="fas fa-plus"></i>
         <% end %>
       </div>
     </div>
-    <div class="squad-player-positions">
+  </div>
+  <div class="squad-player-stats">
+    <div class="squad-player-age" style="margin-left: 3px;">
+      <p>A</p>
     </div>
-    <div class="squad-player-stats">
-      <div class="squad-player-age">
-        <p>A</p>
-      </div>
-      <div class="squad-player-rating">
-        <p>R</p>
-      </div>
-      <div class="squad-player-potential">
-        <p>P</p>
-      </div>
+    <div class="squad-player-rating" style="margin-left: 3px;">
+      <p>R</p>
+    </div>
+    <div class="squad-player-potential" style="min-width: 50px;text-align: center;">
+      <p>P</p>
     </div>
   </div>
+</div>
 <% @squad.squad_rows.each do |squad_row| %>
   <div class="squad-list-row-wrapper">
     <% squad_row.players.each do |player| %>
       <div class="squad-list-row">
         <div class="squad-player-info">
-          <div style="display: flex;">
+          <div class="squad-player-basic">
             <div class="squad-player-badge">
               <i class="fas fa-<%= player.badge %>"></i>
             </div>

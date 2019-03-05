@@ -39,6 +39,11 @@
   margin-right: 20px;
   width: 100%;
 }
+
+.squad-player-basic {
+  display: flex;
+}
+
 .squad-player-name {
   a {
     color: $dark-gray;
