@@ -14,6 +14,7 @@
   flex-direction: column;
   flex-grow: 0;
   margin-right: 30px;
+  padding: 0 15px;
 }
 
 .squad-list-row {
@@ -34,10 +35,13 @@
 
 .squad-player-info {
   display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+  width: 100%;
 }
 .squad-player-name {
   a {
-    color: $gray;
+    color: $dark-gray;
   }
   a:hover {
     text-decoration: none;
@@ -52,8 +56,9 @@
 .squad-player-stats {
   display: flex;
   justify-content: space-between;
-  flex: 60%;
+  flex: 40%;
   flex-grow: 0;
+  color: $gray;
 }
 
 .squad-place-card {

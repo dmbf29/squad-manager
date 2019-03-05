@@ -28,19 +28,21 @@
     <% squad_row.players.each do |player| %>
       <div class="squad-list-row">
         <div class="squad-player-info">
-          <div class="squad-player-badge">
-            <i class="fas fa-<%= player.badge %>"></i>
+          <div style="display: flex;">
+            <div class="squad-player-badge">
+              <i class="fas fa-<%= player.badge %>"></i>
+            </div>
+            <div class="squad-player-name">
+              <p><%= link_to player.full_name, edit_squad_player_path(@squad, player) %>  <%= flag_icon(player.nation.downcase.to_sym) %></p>
+            </div>
           </div>
-          <div class="squad-player-name">
-            <p><%= link_to player.full_name, edit_squad_player_path(@squad, player) %>  <%= flag_icon(player.nation.downcase.to_sym) %></p>
-          </div>
-        </div>
-        <div class="squad-player-stats">
           <div class="squad-player-positions">
             <% player.position_list.each do |position| %>
               <span><%= position %></span>
             <% end %>
           </div>
+        </div>
+        <div class="squad-player-stats">
           <div class="squad-player-age">
             <p><%= player.age %></p>
           </div>
