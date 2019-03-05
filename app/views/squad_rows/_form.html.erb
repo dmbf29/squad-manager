@@ -1,4 +1,4 @@
-<%= simple_form_for @squad_row do |f| %>
-  <%= f.input :number %>
+<%= simple_form_for [@squad, @squad_row] do |f| %>
+  <%= f.input :number, input_html: { value: (@squad.squad_rows.count + 1) } %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>

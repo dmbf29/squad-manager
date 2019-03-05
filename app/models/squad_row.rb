@@ -62,5 +62,12 @@ class SquadRow < ApplicationRecord
         )
       end
     end
+    if number > 4
+      SquadPlace.create(
+        name: "New",
+        number: squad.squad_places.count + 1,
+        squad_row: self
+      )
+    end
   end
 end

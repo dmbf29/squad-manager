@@ -1,12 +1,12 @@
 class SquadRowsController < ApplicationController
 
   def new
-    @squad = Squad.find_by(params[:squad_id])
+    @squad = Squad.find(params[:squad_id])
     @squad_row = SquadRow.new
   end
 
   def create
-    @squad = Squad.find_by(params[:squad_id])
+    @squad = Squad.find(params[:squad_id])
     @squad_row = SquadRow.new(player_params)
     @squad_row.squad = @squad
     if @squad_row.save
@@ -17,13 +17,13 @@ class SquadRowsController < ApplicationController
   end
 
   def edit
-    @squad = Squad.find_by(params[:squad_id])
+    @squad = Squad.find(params[:squad_id])
     @squad_row = SquadRow.find(params[:id])
   end
 
   def update
-    @squad = Squad.find_by(params[:squad])
-    @squad_row = Player.find(params[:id])
+    @squad = Squad.find(params[:squad_id])
+    @squad_row = SquadRow.find(params[:id])
     if @squad_row.update(player_params)
       redirect_to squad_path(@squad)
     else
@@ -34,6 +34,6 @@ class SquadRowsController < ApplicationController
   private
 
   def player_params
-    params.require(:player).permit(:number)
+    params.require(:squad_row).permit(:number)
   end
 end

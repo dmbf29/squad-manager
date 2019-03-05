@@ -27,8 +27,17 @@
       </div>
     <% end %>
     <div class="row-actions">
-      <i class="fas fa-plus"></i>
+      <%= link_to edit_squad_squad_row_path(@squad, row) do %>
+        <i class="far fa-edit"></i>
+      <% end %>
     </div>
   </div>
 <% end %>
+<div class="squad-row" id="squad-row-new">
+  <div class="row-actions">
+    <%= link_to new_squad_squad_row_path(@squad) do %>
+      <i class="fas fa-plus"></i>
+    <% end %>
+  </div>
+</div>
 <!-- ondragstart="playerDragStartHandler(event);" -->
