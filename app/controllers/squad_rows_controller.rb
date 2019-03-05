@@ -1,0 +1,2 @@
+class SquadRowsController < ApplicationController
+end
