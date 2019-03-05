@@ -23,6 +23,7 @@
   }
   display: flex;
   justify-content: space-between;
+  padding: 3px 0;
 }
 .squad-list-row-header {
   p {
@@ -89,7 +90,25 @@
   flex: 40%;
   flex-grow: 0;
 }
-
+.squad-player-positions {
+  span {
+    color: white;
+    font-size: 0.8em;
+    padding: 3px;
+  }
+  .fw {
+    background-color: $teal;
+  }
+  .mf {
+    background-color: $orange;
+  }
+  .df {
+    background-color: $purple;
+  }
+  .gk {
+    background-color: $dark-blue;
+  }
+}
 .squad-place-card {
   background-color: white;
   padding: 10px;

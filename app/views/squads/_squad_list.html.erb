@@ -36,7 +36,7 @@
           </div>
           <div class="squad-player-positions">
             <% player.position_list.each do |position| %>
-              <span><%= position %></span>
+              <span class="<%= position_class(position) %>"><%= position %></span>
             <% end %>
           </div>
         </div>
