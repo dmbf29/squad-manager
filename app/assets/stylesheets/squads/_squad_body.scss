@@ -8,11 +8,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
+  a {
+    color: $blue;
+  }
+  a:hover {
+    color: $red;
+  }
+  h5 {
+    margin: 0;
+  }
 }
 
 .squad-place-card {
   margin-right: 10px;
   min-width: 150px;
+  border-left: 3px solid $blue;
+  height: 100%;
 }
 
 .player-card-name {
