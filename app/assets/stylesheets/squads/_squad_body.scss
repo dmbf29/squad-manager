@@ -3,6 +3,19 @@
   align-items: flex-start;
   margin-bottom: 15px;
 }
+.row-actions {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  a {
+    color: $gray;
+  }
+  a:hover {
+    color: $red;
+    text-decoration: none;
+  }
+}
 
 .squad-place-name {
   display: flex;
