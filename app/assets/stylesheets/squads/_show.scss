@@ -21,7 +21,7 @@
     margin: 0;
   }
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 .squad-list-row-wrapper {
   padding: 10px 0;
@@ -33,13 +33,26 @@
 }
 
 .squad-player-info {
-  display: flex
+  display: flex;
+}
+.squad-player-name {
+  a {
+    color: $gray;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+.squad-player-badge {
+  flex: 23px;
+  margin-right: 5px;
+  text-align: center;
 }
 
 .squad-player-stats {
   display: flex;
   justify-content: space-between;
-  flex: 40%;
+  flex: 60%;
   flex-grow: 0;
 }
 
@@ -47,3 +60,4 @@
   background-color: white;
   padding: 10px;
 }
+

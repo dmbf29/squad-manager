@@ -35,12 +35,12 @@
             <p><%= link_to player.full_name, edit_squad_player_path(@squad, player) %>  <%= flag_icon(player.nation.downcase.to_sym) %></p>
           </div>
         </div>
-        <div class="squad-player-positions">
-          <% player.position_list.each do |position| %>
-            <span><%= position %></span>
-          <% end %>
-        </div>
         <div class="squad-player-stats">
+          <div class="squad-player-positions">
+            <% player.position_list.each do |position| %>
+              <span><%= position %></span>
+            <% end %>
+          </div>
           <div class="squad-player-age">
             <p><%= player.age %></p>
           </div>
