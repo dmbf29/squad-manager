@@ -7,7 +7,7 @@
   <%= f.input :potential_high %>
   <%= f.input :rating %>
   <div style="display:flex">
-    <% Avatar.find_each do |avatar.photo| %>
+    <% Avatar.find_each do |avatar| %>
       <div style="display:flex;flex-direction: column;">
         <%= image_tag avatar.photo, style: "margin-right: 5px;width: 100px;
       height: 100px;" %>
