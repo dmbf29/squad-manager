@@ -7,15 +7,15 @@
   <%= f.input :potential_high %>
   <%= f.input :rating %>
   <div style="display:flex">
-    <% Player::FACES.each do |face| %>
+    <% Avatar.find_each do |avatar.photo| %>
       <div style="display:flex;flex-direction: column;">
-        <%= image_tag face, style: "margin-right: 5px;width: 100px;
+        <%= image_tag avatar.photo, style: "margin-right: 5px;width: 100px;
       height: 100px;" %>
-        <span><%= face %></span>
+        <span><%= avatar.photo %></span>
       </div>
     <% end %>
   </div>
-  <%= f.input :photo %>
+  <%= f.association :avatar %>
   <%= f.input :position_list, as: :check_boxes, collection: Player::POSITIONS %>
   <%= f.input :badge, collection: Player::BADGES %>
   <%= f.input :status, collection: Player.statuses.keys %>
