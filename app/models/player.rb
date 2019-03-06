@@ -20,6 +20,7 @@
 
 class Player < ApplicationRecord
   belongs_to :squad_place
+  belongs_to :avatar
   acts_as_taggable_on :positions
   enum status: [:player, :prospect, :youth]
   after_create :give_order_number
