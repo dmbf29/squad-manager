@@ -6,9 +6,9 @@
   <%= f.input :potential_low %>
   <%= f.input :potential_high %>
   <%= f.input :rating %>
-  <div style="display:flex">
+  <div style="display:flex;flex-wrap: wrap;">
     <% Avatar.find_each do |avatar| %>
-      <div style="display:flex;flex-direction: column;">
+      <div style="display:flex;flex-direction:column;">
         <%= image_tag avatar.photo, style: "margin-right: 5px;width: 100px;
       height: 100px;" %>
         <span><%= avatar.photo %></span>
