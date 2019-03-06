@@ -50,6 +50,20 @@
 .squad-place-player {
   flex-grow: 1;
   transition-duration: 0.8s;
+  display: flex;
+}
+.squad-status {
+  background-color: $teal;
+}
+.prospect-status {
+ background-color: $purple;
+}
+.youth-status {
+  background-color: $green;
+}
+.squad-place-status-bar {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
 .squad-player-card {

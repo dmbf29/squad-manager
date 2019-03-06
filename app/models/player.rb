@@ -22,7 +22,7 @@ class Player < ApplicationRecord
   belongs_to :squad_place
   belongs_to :avatar
   acts_as_taggable_on :positions
-  enum status: [:player, :prospect, :youth]
+  enum status: [:squad, :loan, :youth]
   after_create :give_order_number
 
   POSITIONS = %w(GK LB CB RB DM LM CM RM CAM LW CF ST RW)

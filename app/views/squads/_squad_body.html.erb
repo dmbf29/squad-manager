@@ -6,9 +6,13 @@
           <h5><%= link_to place.name, edit_squad_place_path(place) %></h5>
         </div>
         <div class="squad-place-player" id="squad-place-players-<%= place.id %>" data-action="drop->squadplace#playerDropHandler dragover->squadplace#playerDragOverHandler dragleave->squadplace#playerDragExitHandler" data-id="<%= place.id %>">
+          <div class="squad-place-status-bar">
+            SQUAD
+          </div>
           <% if place.players.empty? %>
             <p>-</p>
           <% else %>
+            <div>
             <% place.players.order(rating: :desc).each do |player| %>
               <div id="player-<%= player.id %>" class="squad-player-card" draggable="true"  data-action="dragstart->squadplace#playerDragHandler">
                 <div class="player-card-avatar">
@@ -36,6 +40,7 @@
                 </div>
               </div>
             <% end %>
+            </div>
           <% end %>
         </div>
       </div>
