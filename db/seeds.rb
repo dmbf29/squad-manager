@@ -405,7 +405,7 @@
 #   squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 3)
 # ).first_or_create!
 
-(1..34).to_a.each do |number|
+(1..28).to_a.each do |number|
   Avatar.where(
     photo: "avatar_#{number}.png"
   ).first_or_create!
