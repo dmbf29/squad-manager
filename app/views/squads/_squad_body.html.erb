@@ -6,41 +6,19 @@
           <h5><%= link_to place.name, edit_squad_place_path(place) %></h5>
         </div>
         <div class="squad-place-player" id="squad-place-players-<%= place.id %>" data-action="drop->squadplace#playerDropHandler dragover->squadplace#playerDragOverHandler dragleave->squadplace#playerDragExitHandler" data-id="<%= place.id %>">
-          <div class="squad-place-status-bar">
-            SQUAD
-          </div>
-          <% if place.players.empty? %>
-            <p>-</p>
-          <% else %>
-            <div>
-            <% place.players.order(rating: :desc).each do |player| %>
-              <div id="player-<%= player.id %>" class="squad-player-card" draggable="true"  data-action="dragstart->squadplace#playerDragHandler">
-                <div class="player-card-avatar">
-                  <% if player.avatar.blank? %>
-                    <%= image_tag "avatar_1.png" %>
-                  <% else %>
-                    <%= image_tag player.avatar.photo %>
-                  <% end %>
-                </div>
-                <div class="player-card-info">
-                  <div class="player-card-first">
-                    <p><%= player.first_name %></p>
-                  </div>
-                  <div class="player-card-name">
-                    <p><%= player.last_name %></p>
-                  </div>
-                </div>
-                <div class="player-card-rating">
-                  <p><%= player.rating %></p>
-                  <div class="squad-player-form">
-                    <%= simple_form_for [@squad, player] do |f| %>
-                      <% f.input :squad_place_id, as: :hidden %>
-                    <% end %>
-                  </div>
-                </div>
+          <% Player.statuses.keys.each do |status| %>
+<!--             <div class="player-status-container">-->
+            <% if place.players.where(status: status).any? %>
+<!--               <div class="squad-place-status-bar <%#= status %>-status">
+                <%#= status.upcase %>
+              </div> -->
+              <div class="<%= status %>-status">
+                <% place.players.where(status: status).order(rating: :desc).each do |player| %>
+                  <%= render partial: 'players/card', locals: { player: player } %>
+                <% end %>
               </div>
             <% end %>
-            </div>
+            <!-- </div> -->
           <% end %>
         </div>
       </div>
@@ -52,6 +30,8 @@
     </div>
   </div>
 <% end %>
+
+<!-- Links to row actions -->
 <div class="squad-row" id="squad-row-new">
   <div class="row-actions">
     <%= link_to new_squad_squad_row_path(@squad) do %>
@@ -59,4 +39,3 @@
     <% end %>
   </div>
 </div>
-<!-- ondragstart="playerDragStartHandler(event);" -->
