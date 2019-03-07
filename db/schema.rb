@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_28_093306) do
+ActiveRecord::Schema.define(version: 2019_03_06_030536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "avatars", force: :cascade do |t|
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "formations", force: :cascade do |t|
     t.string "name"
@@ -36,10 +42,11 @@ ActiveRecord::Schema.define(version: 2019_02_28_093306) do
     t.string "badge"
     t.integer "status"
     t.integer "order"
-    t.string "photo"
     t.bigint "squad_place_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "avatar_id"
+    t.index ["avatar_id"], name: "index_players_on_avatar_id"
     t.index ["squad_place_id"], name: "index_players_on_squad_place_id"
   end
 
@@ -109,6 +116,7 @@ ActiveRecord::Schema.define(version: 2019_02_28_093306) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "players", "avatars"
   add_foreign_key "players", "squad_places"
   add_foreign_key "squad_places", "squad_rows"
   add_foreign_key "squad_rows", "squads"

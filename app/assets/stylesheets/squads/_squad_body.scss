@@ -22,11 +22,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid $blue;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $teal;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-left: 4px solid $teal;
   a {
-    color: $blue;
+    color: $teal;
   }
   a:hover {
     color: $red;
@@ -38,9 +40,10 @@
 }
 
 .squad-place-card {
+  // padding: 10px;
+  background-color: white;
   margin-right: 10px;
   min-width: 200px;
-  border-left: 3px solid $blue;
   height: 100%;
   box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   display: flex;
@@ -50,6 +53,21 @@
 .squad-place-player {
   flex-grow: 1;
   transition-duration: 0.8s;
+  display: flex;
+  flex-direction: column;
+}
+.squad-status {
+  border-left: 4px solid $teal;
+  flex-grow: 1;
+}
+.loan-status {
+ border-left: 4px solid $purple;
+}
+.youth-status {
+  border-left: 4px solid $orange;
+}
+.player-status-container {
+  display: flex;
 }
 
 .squad-player-card {
@@ -57,17 +75,19 @@
   justify-content: space-between;
   padding: 10px 5px;
   align-items: center;
-  border-bottom: 1px solid $light-gray;
+  border-top: 1px solid $light-gray;
   &:hover {
     cursor: move;
     background-color: $light-gray;
   }
 }
-.squad-player-card:last-child {
-  border-bottom: none;
+.squad-status {
+  .squad-player-card:last-child {
+    border-bottom: 1px solid $light-gray;
+  }
 }
 .squad-player-card:first-child {
-  padding: 0 5px 10px 5px;
+  // padding: 0 5px 10px 5px;
 }
 .player-card-positions {
   display: flex;
@@ -85,7 +105,7 @@
   flex-grow: 0;
   font-size: 1.7em;
   img {
-    width: 27px;
+    width: 30px;
     border-radius: 50%;
   }
 }
@@ -115,6 +135,16 @@
 
 .player-card-first {
   font-weight: lighter;
+}
+
+.squad-place-count {
+  margin-right: 10px;
+  font-weight: lighter;
+  color: $orange;
+  font-size: 0.7em;
+  border: 1px solid $orange;
+  border-radius: 50%;
+  padding: 1px 5px;
 }
 
 .gray-background {
