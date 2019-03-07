@@ -5,5 +5,5 @@
   <% end %>
 </div>
 <% @squads.each do |squad| %>
-  <p><%= link_to squad.name squad_path(squad)%></p>
+  <p><%= link_to squad.name, squad_path(squad)%></p>
 <% end %>
