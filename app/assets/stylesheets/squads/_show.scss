@@ -14,7 +14,8 @@
   flex-direction: column;
   flex-grow: 0;
   margin-right: 30px;
-  padding: 0 15px;
+  padding: 0 10px 0 5px;
+  border-left: 4px solid #F85C6F;
 }
 
 .squad-list-row {
@@ -33,7 +34,7 @@
   font-weight: bold;
   justify-content: space-between;
   padding: 5px 15px;
-  margin: 0 -15px;
+  margin: 0 -10px 0 -5px;
   background-color: $teal;
   color: white !important;
 }
