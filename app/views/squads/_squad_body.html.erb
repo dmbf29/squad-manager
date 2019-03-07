@@ -4,21 +4,17 @@
       <div class="squad-place-card" id="squad-place-card-<%= place.id %>" data-controller="squadplace">
         <div class="squad-place-name">
           <h5><%= link_to place.name, edit_squad_place_path(place) %></h5>
+          <span class="squad-place-count"><%= place.players.count %></span>
         </div>
         <div class="squad-place-player" id="squad-place-players-<%= place.id %>" data-action="drop->squadplace#playerDropHandler dragover->squadplace#playerDragOverHandler dragleave->squadplace#playerDragExitHandler" data-id="<%= place.id %>">
           <% Player.statuses.keys.each do |status| %>
-<!--             <div class="player-status-container">-->
             <% if place.players.where(status: status).any? %>
-<!--               <div class="squad-place-status-bar <%#= status %>-status">
-                <%#= status.upcase %>
-              </div> -->
               <div class="<%= status %>-status">
                 <% place.players.where(status: status).order(rating: :desc).each do |player| %>
                   <%= render partial: 'players/card', locals: { player: player } %>
                 <% end %>
               </div>
             <% end %>
-            <!-- </div> -->
           <% end %>
         </div>
       </div>
