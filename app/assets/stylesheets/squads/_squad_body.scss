@@ -75,14 +75,16 @@
   justify-content: space-between;
   padding: 10px 5px;
   align-items: center;
-  border-bottom: 1px solid $light-gray;
+  border-top: 1px solid $light-gray;
   &:hover {
     cursor: move;
     background-color: $light-gray;
   }
 }
-.squad-player-card:last-child {
-  // border-bottom: none;
+.squad-status {
+  .squad-player-card:last-child {
+    border-bottom: 1px solid $light-gray;
+  }
 }
 .squad-player-card:first-child {
   // padding: 0 5px 10px 5px;
