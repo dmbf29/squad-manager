@@ -43,7 +43,7 @@ Player.where(
   potential_low: 8,
   rating: 70,
   badge: "crown",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_22.png"),
   squad_place_id: squad.squad_rows.find_by(number: 4).squad_places.find_by(number: 1)
 ).first_or_create!
@@ -85,7 +85,7 @@ Player.where(
   potential_low: 75,
   rating: 74,
   badge: "futbol",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_28.png"),
   squad_place_id: squad.squad_rows.find_by(number: 4).squad_places.find_by(number: 1)
 ).first_or_create!
@@ -99,7 +99,7 @@ Player.where(
   potential_low: 75,
   rating: 71,
   badge: "heart",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_14.png"),
   squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 1)
 ).first_or_create!
@@ -113,7 +113,7 @@ Player.where(
   potential_low: 75,
   rating: 67,
   badge: "futbol",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_4.png"),
   squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 1)
 ).first_or_create!
@@ -141,7 +141,7 @@ Player.where(
   potential_low: 80,
   rating: 68,
   badge: "gem",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_25.png"),
   squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 2)
 ).first_or_create!
@@ -155,7 +155,7 @@ Player.where(
   potential_low: 80,
   rating: 64,
   badge: "gem",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_27.png"),
   squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 2)
 ).first_or_create!
@@ -169,7 +169,7 @@ Player.where(
   potential_low: 77,
   rating: 59,
   badge: "futbol",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_4.png"),
   squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 3)
 ).first_or_create!
@@ -183,7 +183,7 @@ Player.where(
   potential_low: 77,
   rating: 60,
   badge: "futbol",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_1.png"),
   squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 3)
 ).first_or_create!
@@ -197,7 +197,7 @@ Player.where(
   potential_low: 87,
   rating: 66,
   badge: "crown",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_23.png"),
   squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 4)
 ).first_or_create!
@@ -211,7 +211,7 @@ Player.where(
   potential_low: 83,
   rating: 64,
   badge: "gem",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_21.png"),
   squad_place_id: squad.squad_rows.find_by(number: 3).squad_places.find_by(number: 4)
 ).first_or_create!
@@ -225,7 +225,7 @@ Player.where(
   potential_low: 72,
   rating: 72,
   badge: "futbol",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_19.png"),
   squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 1)
 ).first_or_create!
@@ -239,7 +239,7 @@ Player.where(
   potential_low: 82,
   rating: 62,
   badge: "gem",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_6.png"),
   squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 1)
 ).first_or_create!
@@ -253,7 +253,7 @@ Player.where(
   potential_low: 88,
   rating: 64,
   badge: "crown",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_26.png"),
   squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 1)
 ).first_or_create!
@@ -281,7 +281,7 @@ Player.where(
   potential_low: 89,
   rating: 70,
   badge: "crown",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_4.png"),
   squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 2)
 ).first_or_create!
@@ -323,7 +323,7 @@ Player.where(
   potential_low: 82,
   rating: 65,
   badge: "gem",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_16.png"),
   squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 3)
 ).first_or_create!
@@ -351,7 +351,7 @@ Player.where(
   potential_low: 71,
   rating: 76,
   badge: "heart",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_2.png"),
   squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 1)
 ).first_or_create!
@@ -365,7 +365,7 @@ Player.where(
   potential_low: 70,
   rating: 71,
   badge: "futbol",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_21.png"),
   squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 1)
 ).first_or_create!
@@ -379,7 +379,7 @@ Player.where(
   potential_low: 89,
   rating: 70,
   badge: "crown",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_5.png"),
   squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 1)
 ).first_or_create!
@@ -393,7 +393,7 @@ Player.where(
   potential_low: 83,
   rating: 67,
   badge: "gem",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_1.png"),
   squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 2)
 ).first_or_create!
@@ -407,7 +407,7 @@ Player.where(
   potential_low: 72,
   rating: 70,
   badge: "futbol",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_3.png"),
   squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 2)
 ).first_or_create!
@@ -421,7 +421,7 @@ Player.where(
   potential_low: 72,
   rating: 68,
   badge: "futbol",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_19.png"),
   squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 2)
 ).first_or_create!
@@ -435,7 +435,7 @@ Player.where(
   potential_low: 89,
   rating: 78,
   badge: "crown",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_1.png"),
   squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 3)
 ).first_or_create!
@@ -449,7 +449,7 @@ Player.where(
   potential_low: 85,
   rating: 67,
   badge: "crown",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_10.png"),
   squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 3)
 ).first_or_create!
@@ -463,7 +463,7 @@ Player.where(
   potential_low: 88,
   rating: 64,
   badge: "crown",
-  status: "player",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_11.png"),
   squad_place_id: squad.squad_rows.find_by(number: 1).squad_places.find_by(number: 3)
 ).first_or_create!
