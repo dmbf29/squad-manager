@@ -71,7 +71,7 @@ Player.where(
   potential_low: 87,
   rating: 60,
   badge: "crown",
-  status: "prospect",
+  status: "loan",
   avatar: Avatar.find_by(photo: "avatar_14.png"),
   squad_place_id: squad.squad_rows.find_by(number: 4).squad_places.find_by(number: 1)
 ).first_or_create!
@@ -295,7 +295,7 @@ Player.where(
   potential_low: 82,
   rating: 61,
   badge: "gem",
-  status: "prospect",
+  status: "squad",
   avatar: Avatar.find_by(photo: "avatar_7.png"),
   squad_place_id: squad.squad_rows.find_by(number: 2).squad_places.find_by(number: 2)
 ).first_or_create!
