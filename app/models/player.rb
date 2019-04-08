@@ -43,4 +43,8 @@ class Player < ApplicationRecord
     self.order = squad_place.players.count
     save
   end
+
+  def squad
+    squad_place.squad_row.squad
+  end
 end
