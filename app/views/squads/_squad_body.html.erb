@@ -1,3 +1,5 @@
+<%= render 'squads/header' %>
+
 <% @squad.squad_rows.order(number: :asc).each do |row| %>
   <div class="squad-row" id="squad-row-<%= row.id %>">
     <% row.squad_places.each do |place| %>

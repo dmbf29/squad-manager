@@ -1,32 +1,3 @@
-<div class="squad-header"> <!-- flex -->
-  <div class="squad-header-name">
-    <h5>@squad.name</h5>
-  </div>
-  <div class="squad-header-titles">
-    <div class="squad-header-labels">
-
-    </div>
-    <div class="squad-header-title">
-      <h5>All ( <%= @squad.players_except_youth.count %> / 52 )</h5>
-    </div>
-    <div class="squad-header-title">
-      <h5>FW ( <%= @squad.first_row_players.count %>)</h5>
-    </div>
-    <div class="squad-header-title">
-      <h5>MF ( <%= @squad.second_row_players.count %>)</h5>
-    </div>
-    <div class="squad-header-title">
-      <h5>DF ( <%= @squad.third_row_players.count %>)</h5>
-    </div>
-    <div class="squad-header-title">
-      <h5>GK ( <%= @squad.fourth_row_players.count %>)</h5>
-    </div>
-  </div>
-  <div class="squad-header-stats">
-
-  </div>
-</div>
-
 <div class="squad-container">
   <div class="squad-list" id="squad-list">
     <%= render partial: 'squads/squad_list' %>

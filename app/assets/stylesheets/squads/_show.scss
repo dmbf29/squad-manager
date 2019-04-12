@@ -21,6 +21,8 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  background-color: $gray;
+  color: white;
 }
 .squad-header-stats {
   display: flex;
@@ -29,6 +31,11 @@
   width: 100%;
 }
 
+.squad-header-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .squad-list {
   background-color: white;

@@ -1,0 +1,51 @@
+<div class="squad-header"> <!-- flex -->
+  <div class="squad-header-name">
+    <h5><%= @squad.name %></h5>
+  </div>
+  <div class="squad-header-titles">
+    <div class="squad-header-labels">
+
+    </div>
+    <div class="squad-header-title">
+      <h5>All ( <%= @squad.players_except_youth.count %> / 52 )</h5>
+    </div>
+    <div class="squad-header-title">
+      <h5>FW ( <%= @squad.first_row_players.count %>)</h5>
+    </div>
+    <div class="squad-header-title">
+      <h5>MF ( <%= @squad.second_row_players.count %>)</h5>
+    </div>
+    <div class="squad-header-title">
+      <h5>DF ( <%= @squad.third_row_players.count %>)</h5>
+    </div>
+    <div class="squad-header-title">
+      <h5>GK ( <%= @squad.fourth_row_players.count %>)</h5>
+    </div>
+  </div>
+  <div class="squad-header-stats">
+    <div class="squad-header-labels">
+      <p> </p>
+      <p>Squad</p>
+      <p>Loan</p>
+      <p>Youth</p>
+    </div>
+    <div class="squad-header-stat">
+      <div class="squad-header-stat-row">
+        <p><i class="fas fa-users"></i></p>
+        <p><i class="fas fa-star"></i></p>
+      </div>
+      <div class="squad-header-stat-row">
+        <p><%= @squad.players.where(status: "squad").count %></p>
+        <p></p>
+      </div>
+      <div class="squad-header-stat-row">
+        <p><%= @squad.players.where(status: "loan").count %></p>
+        <p></p>
+      </div>
+      <div class="squad-header-stat-row">
+        <p><%= @squad.players.where(status: "youth").count %></p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
