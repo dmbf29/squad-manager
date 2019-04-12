@@ -5,7 +5,30 @@
 
 .squad-header {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
 }
+
+.squad-header-name {
+  background-color: $teal;
+  color: white;
+  width: 100%;
+}
+
+.squad-header-titles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.squad-header-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 
 .squad-list {
   background-color: white;

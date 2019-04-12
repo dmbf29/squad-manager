@@ -28,4 +28,24 @@ class Squad < ApplicationRecord
       )
     end
   end
+
+  def players_except_youth
+    players.where.not(status: "youth")
+  end
+
+  def first_row_players
+    squad_rows.find_by(number: 1).players
+  end
+
+  def second_row_players
+    squad_rows.find_by(number: 2).players
+  end
+
+  def third_row_players
+    squad_rows.find_by(number: 3).players
+  end
+
+  def fourth_row_players
+    squad_rows.find_by(number: 4).players
+  end
 end
