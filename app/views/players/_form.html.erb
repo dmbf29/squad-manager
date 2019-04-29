@@ -1,13 +1,21 @@
 <%= simple_form_for [@squad, @player] do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :nation %>
-  <%= f.input :age %>
-  <%= f.input :rating %>
-  <%= f.input :potential_low %>
-  <%= f.input :potential_high %>
-  <%= f.input :badge, collection: Player::BADGES %>
-  <%= f.input :status, collection: Player.statuses.keys %>
+  <div style="display:flex;justify-content: space-between;">
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :nation %>
+  </div>
+  <div style="display:flex;justify-content: space-between;">
+    <%= f.input :age %>
+    <%= f.input :rating %>
+    <%= f.input :potential_low %>
+    <%= f.input :potential_high %>
+  </div>
+  <div style="display:flex;justify-content: space-between;">
+    <%= f.input :badge, collection: Player::BADGES %>
+    <%= f.input :status, collection: Player.statuses.keys %>
+    <%= f.association :squad_place, collection: @squad.squad_places  %>
+  </div>
+  <%= f.input :position_list, as: :check_boxes, collection: Player::POSITIONS %>
   <div style="display:flex;flex-wrap: wrap;">
     <% Avatar.find_each do |avatar| %>
       <div style="display:flex;flex-direction:column;">
@@ -18,7 +26,5 @@
     <% end %>
   </div>
   <%= f.association :avatar %>
-  <%= f.input :position_list, as: :check_boxes, collection: Player::POSITIONS %>
-  <%= f.association :squad_place, collection: @squad.squad_places  %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>
