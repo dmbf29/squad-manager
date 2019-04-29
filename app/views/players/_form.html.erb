@@ -11,6 +11,14 @@
     <%= f.input :potential_high %>
   </div>
   <div style="display:flex;justify-content: space-between;">
+    <div class="badge-legend">
+      <small><i class="fas fa-crown"></i> Crown&nbsp;&nbsp;&nbsp;&nbsp;| 94-95</small><br>
+      <small><i class="fas fa-star"></i> Star&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 90-93</small><br>
+      <small><i class="fas fa-gem"></i> Gem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 88-89</small><br>
+      <small><i class="fas fa-shield-alt"></i> Shield&nbsp;&nbsp;&nbsp;| 85-87</small><br>
+      <small><i class="fas fa-futbol"></i> Football&nbsp;| 80-84</small><br>
+      <small><i class="fas fa-seedling"></i> Seedling&nbsp;| Youth</small>
+    </div>
     <%= f.input :badge, collection: Player::BADGES %>
     <%= f.input :status, collection: Player.statuses.keys %>
     <%= f.association :squad_place, collection: @squad.squad_places  %>

@@ -151,5 +151,13 @@
   background-color: $light-gray
 }
 
-
+.badge-legend {
+  flex: 1 0 auto;
+  font-family: monospace;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  p {
+    margin: 0
+  }
+}
 
