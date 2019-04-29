@@ -45,7 +45,7 @@
             <p><%= all = players.where(status: "squad").count %></p>
           </div>
           <div class="squad-header-stat-row-two">
-            <p><%= (players.where(status: "squad").pluck(:rating).inject(:+) / all.to_f).round(2) %></p>
+            <p><%= all > 0 ? (players.where(status: "squad").pluck(:rating).inject(:+) / all.to_f).round(2) : "-" %></p>
           </div>
         </div>
         <div class="squad-header-stat-row">
@@ -53,7 +53,7 @@
             <p><%= loan = players.where(status: "loan").count %></p>
           </div>
           <div class="squad-header-stat-row-two">
-            <p><%= (players.where(status: "loan").pluck(:rating).inject(:+) / loan.to_f).round(2) %></p>
+            <p><%= loan > 0 ? (players.where(status: "loan").pluck(:rating).inject(:+) / loan.to_f).round(2) : "-" %></p>
           </div>
         </div>
         <div class="squad-header-stat-row">
@@ -61,7 +61,7 @@
             <p><%= youth = players.where(status: "youth").count %></p>
           </div>
           <div class="squad-header-stat-row-two">
-            <p><%= (players.where(status: "youth").pluck(:rating).inject(:+) / youth.to_f).round(2) %></p>
+            <p><%= youth > 0 ? (players.where(status: "youth").pluck(:rating).inject(:+) / youth.to_f).round(2) : "-" %></p>
           </div>
         </div>
       </div>
