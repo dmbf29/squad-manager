@@ -8,12 +8,16 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
+  box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  margin-bottom: 10px;
 }
 
 .squad-header-name {
-  background-color: $teal;
-  color: white;
+  background-color: white;
+  border-top: 2px solid $orange;
+  color: $orange;
   width: 100%;
+  padding-left: 10px;
 }
 
 .squad-header-titles {
@@ -21,20 +25,47 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: $gray;
+  background-color: $teal;
   color: white;
+}
+.squad-header-title {
+  flex: 1;
+  text-align: center;
 }
 .squad-header-stats {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  background-color: white;
+  p {
+    margin: 0;
+  }
+}
+.squad-header-stat {
+  flex: 1 0 auto;
+  border-left: 3px solid $gray;
+}
+.squad-header-labels {
+  background-color: $gray;
+  color: $light-gray;
+  padding: 0 5px;
 }
 
 .squad-header-stat-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+.squad-header-stat-row-one {
+  padding-right: 5px;
+  flex: 1;
+  text-align: right;
+  border-right: 1px solid #DBDBDB;
+}
+.squad-header-stat-row-two {
+  padding-left: 5px;
+  flex: 1;
 }
 
 .squad-list {
