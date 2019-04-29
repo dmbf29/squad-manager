@@ -61,7 +61,7 @@
             <p><%= youth = players.where(status: "youth").count %></p>
           </div>
           <div class="squad-header-stat-row-two">
-            <p><%= (players.where(status: "loan").pluck(:rating).inject(:+) / youth.to_f).round(2) %></p>
+            <p><%= (players.where(status: "youth").pluck(:rating).inject(:+) / youth.to_f).round(2) %></p>
           </div>
         </div>
       </div>
