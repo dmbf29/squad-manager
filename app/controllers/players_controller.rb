@@ -1,12 +1,12 @@
 class PlayersController < ApplicationController
 
   def new
-    @squad = Squad.find_by(params[:squad_id])
+    @squad = Squad.find(params[:squad_id])
     @player = Player.new
   end
 
   def create
-    @squad = Squad.find_by(params[:squad_id])
+    @squad = Squad.find(params[:squad_id])
     @player = Player.new(player_params)
     if @player.save
       redirect_to squad_path(@squad)
